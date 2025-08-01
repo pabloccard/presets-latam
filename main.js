@@ -38,27 +38,26 @@
    Suporta múltiplas instâncias .ba na página
    =========================== */
 /* Before/After com CSS variable + clip-path */
-(function(){
+/* Before/After – arrasta SOMENTE pelo knob (botão redondo) */
+(function () {
   const wraps = document.querySelectorAll('.ba');
   if (!wraps.length) return;
 
-  wraps.forEach((wrap)=>{
-    // inicia a posição pela data-start (0–100)
+  wraps.forEach((wrap) => {
+    // posição inicial (0–100)
     let start = parseFloat(wrap.getAttribute('data-start'));
     if (isNaN(start)) start = 50;
     setPos(start);
 
     const knob = wrap.querySelector('.ba__knob');
 
-    function rect(){ return wrap.getBoundingClientRect(); }
-    function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
-
-    function setPos(percent){
+    function rect() { return wrap.getBoundingClientRect(); }
+    function clamp(n, min, max) { return Math.max(min, Math.min(max, n)); }
+    function setPos(percent) {
       const p = clamp(percent, 0, 100);
       wrap.style.setProperty('--pos', p + '%');
     }
-
-    function move(clientX){
+    function move(clientX) {
       const r = rect();
       const p = ((clientX - r.left) / r.width) * 100;
       setPos(p);
@@ -66,51 +65,53 @@
 
     let dragging = false;
 
+    // inicia arraste SÓ pelo knob
     const startDrag = (e) => {
       dragging = true;
       wrap.classList.add('is-dragging');
       const x = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
       move(x);
+      // impede rolagem da página enquanto arrasta o knob
+      if (e.cancelable) e.preventDefault();
     };
 
     const onDrag = (e) => {
       if (!dragging) return;
       const x = (e.touches && e.touches[0]) ? e.touches[0].clientX : e.clientX;
       move(x);
+      if (e.cancelable) e.preventDefault();
     };
 
     const endDrag = () => {
+      if (!dragging) return;
       dragging = false;
       wrap.classList.remove('is-dragging');
     };
 
-    // Eventos mouse/touch
-    ['mousedown','touchstart'].forEach(ev=>{
-      wrap.addEventListener(ev, startDrag, { passive:true });
-      knob.addEventListener(ev, startDrag, { passive:true });
-    });
-    ['mousemove','touchmove'].forEach(ev=>{
-      window.addEventListener(ev, onDrag, { passive:true });
-    });
-    ['mouseup','mouseleave','touchend','touchcancel'].forEach(ev=>{
-      window.addEventListener(ev, endDrag, { passive:true });
-    });
+    // 🔒 Eventos SOMENTE no knob
+    knob.addEventListener('mousedown', startDrag);
+    knob.addEventListener('touchstart', startDrag, { passive: false });
 
-    // Acessibilidade: clique/teclado posiciona a linha
-    wrap.addEventListener('click', (e)=>{
-      // evita quando clicar no knob disparar 2x
-      if (e.target === knob) return;
-      move(e.clientX);
-    });
-    wrap.addEventListener('keydown', (e)=>{
-      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
+    window.addEventListener('mousemove', onDrag, { passive: true });
+    window.addEventListener('touchmove', onDrag, { passive: false });
+    window.addEventListener('mouseup', endDrag);
+    window.addEventListener('touchend', endDrag);
+    window.addEventListener('touchcancel', endDrag);
+
+    // Acessibilidade: setas do teclado movem a linha quando o knob está focado
+    knob.setAttribute('tabindex', '0');
+    knob.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
         const current = parseFloat(getComputedStyle(wrap).getPropertyValue('--pos')) || 50;
         setPos(current + (e.key === 'ArrowRight' ? 2 : -2));
+        e.preventDefault();
       }
     });
-    knob.setAttribute('tabindex','0');
+
+    // Importante: NÃO há click no container .ba → rolagem vertical funciona normalmente
   });
 })();
+
 
 
 // FAQ accordion
