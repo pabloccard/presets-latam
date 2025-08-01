@@ -1,441 +1,475 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Presets Lightroom – Hero MVP</title>
 
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Presets Lightroom – Hero MVP</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Sessão 1 — Hero -->
-    <section id="s1-hero" class="hero section" aria-label="Seção principal de destaque">
-      <div class="hero__inner">
-        <!-- Esquerda: texto + CTAs -->
-        <div class="hero__copy">
-          <span class="eyebrow reveal">Edição fácil no celular</span>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-          <h1 class="h1 reveal d2">
-            Transforme qualquer foto sua em uma foto profissional com apenas 1
-            clique.
-          </h1>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <p class="sub reveal d3">
-            Nossos presets foram feitos para você editar suas fotos em segundos,
-            direto do seu celular, mesmo sem nenhuma experiência em edição.
-          </p>
+<body>
+  <!-- Sessão 1 — Hero -->
+  <section id="s1-hero" class="hero section" aria-label="Seção principal de destaque">
+    <div class="hero__inner">
+      <!-- Esquerda: texto + CTAs -->
+      <div class="hero__copy">
+        <span class="eyebrow reveal">Edição fácil no celular</span>
 
-          <div class="cta-row reveal d4">
-            <button
-              id="cta-hero"
-              class="btn btn--primary btn--lg"
-              aria-label="Quero transformar minhas fotos agora"
-            >
-              Quero transformar minhas fotos agora
-            </button>
+        <h1 class="h1 reveal d2">
+          Transforme qualquer foto sua em uma foto profissional com apenas 1
+          clique.
+        </h1>
 
-            <!-- <a
+        <p class="sub reveal d3">
+          Nossos presets foram feitos para você editar suas fotos em segundos,
+          direto do seu celular, mesmo sem nenhuma experiência em edição.
+        </p>
+
+        <div class="cta-row reveal d4">
+          <button id="cta-hero" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
+            Quero transformar minhas fotos agora
+          </button>
+
+          <!-- <a
               href="#s3-presets-cenarios"
               class="btn btn--ghost"
               aria-label="Ver antes e depois"
             >
               Ver antes e depois
             </a> -->
-          </div>
-        </div>
-
-        <!-- Direita: mockup / imagem -->
-        <div class="hero__media reveal d3">
-          <figure
-            class="mockup"
-            role="img"
-            aria-label="Mockup do celular exibindo edição de foto com presets"
-          >
-            <img
-              src="img/hero-mockup.png"
-              alt="Tela de celular com foto antes e depois editada com preset"
-              loading="eager"
-              decoding="async"
-            />
-          </figure>
         </div>
       </div>
-    </section>
 
-    <!-- ######################## Sessão 2 — O que são e como funcionam -->
-    <!-- Sessão 2 — O que são e como funcionam -->
-    <section
-      id="s2-o-que-e-como-funciona"
-      class="section section--light how"
-      aria-label="O que são presets e como funcionam"
-    >
-      <div class="container how__grid">
-        <!-- Texto -->
-        <div class="how__copy">
-          <h2 class="h2">O que são Presets e como eles funcionam?</h2>
-          <p class="how__text">
-            Os Presets são <strong>edições profissionais prontas</strong> que
-            você aplica em suas fotos <strong>direto do celular</strong> com
-            apenas um toque.
-          </p>
-          <p class="how__text">
-            Eles ajustam
-            <strong>cores, luz e contraste automaticamente</strong>, deixando
-            qualquer foto com
-            <strong>aparência profissional em segundos</strong>, sem precisar
-            saber nada de edição.
-          </p>
-        </div>
+      <!-- Direita: mockup / imagem -->
+      <div class="hero__media reveal d3">
+        <figure class="mockup" role="img" aria-label="Mockup do celular exibindo edição de foto com presets">
+          <img src="img/hero-mockup.png" alt="Tela de celular com foto antes e depois editada com preset"
+            loading="eager" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
 
-        <!-- Comparador Antes/Depois (bem menor) -->
-        <div class="how__ba">
-          <!--
+  <!-- ######################## Sessão 2 — O que são e como funcionam -->
+  <!-- Sessão 2 — O que são e como funcionam -->
+  <section id="s2-o-que-e-como-funciona" class="section section--light how"
+    aria-label="O que são presets e como funcionam">
+    <div class="container how__grid">
+      <!-- Texto -->
+      <div class="how__copy">
+        <h2 class="h2">O que são Presets e como eles funcionam?</h2>
+        <p class="how__text">
+          Os Presets são <strong>edições profissionais prontas</strong> que
+          você aplica em suas fotos <strong>direto do celular</strong> com
+          apenas um toque.
+        </p>
+        <p class="how__text">
+          Eles ajustam
+          <strong>cores, luz e contraste automaticamente</strong>, deixando
+          qualquer foto com
+          <strong>aparência profissional em segundos</strong>, sem precisar
+          saber nada de edição.
+        </p>
+      </div>
+
+      <!-- Comparador Antes/Depois (bem menor) -->
+      <div class="how__ba">
+        <!--
         Suba DUAS imagens em /img/:
         - img/how-before.webp
         - img/how-after.webp
       -->
-          <div
-            class="ba ba--xs"
-            data-start="50"
-            aria-label="Comparador de imagem interativo"
-          >
-            <img
-              class="ba__img is-before"
-              src="img/how-before.webp"
-              alt="Imagem antes"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="ba__img is-after"
-              src="img/how-after.webp"
-              alt="Imagem depois"
-              loading="lazy"
-              decoding="async"
-            />
+        <div class="ba ba--xs" data-start="50" aria-label="Comparador de imagem interativo">
+          <img class="ba__img is-before" src="img/how-before.webp" alt="Imagem antes" loading="lazy" decoding="async" />
+          <img class="ba__img is-after" src="img/how-after.webp" alt="Imagem depois" loading="lazy" decoding="async" />
+
+          <div class="ba__handle" aria-hidden="true"></div>
+          <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+        </div>
+      </div>
+
+      <!-- CTA (separado para poder reposicionar no mobile) -->
+      <div class="how__cta">
+        <a href="#s5-oferta" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
+          Quero transformar minhas fotos agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão 3 — Presets em diferentes cenários -->
+
+  <section id="s3-presets-cenarios" class="section section--dark presets" aria-label="Presets em diferentes cenários">
+    <div class="container">
+      <header class="presets__head">
+        <h2 class="h2 presets__title">São vários presets para você usar em diferentes cenários</h2>
+        <p class="presets__sub">Arraste a linha para comparar em tempo real</p>
+      </header>
+
+      <!-- Grid de cards (9 itens) -->
+      <div class="cards">
+        <!-- 1 -->
+        <article class="card">
+          <h3 class="card__title">Dark Mood</h3>
+          <p class="card__count badge">06 presets</p>
+          <p class="card_description">Presets com tons escuros, contraste marcante e uma pegada mais dramática.</p>
+
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <div class="ba__labels">
+              <span class="ba__label ba__label--before">Antes</span>
+              <span class="ba__label ba__label--after">Depois</span>
+            </div>
+
+            <img class="ba__img is-before" src="img/dark-before.webp" alt="Urbano – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/dark-after.webp" alt="Urbano – depois" loading="lazy"
+              decoding="async">
 
             <div class="ba__handle" aria-hidden="true"></div>
-            <button
-              class="ba__knob"
-              aria-label="Arrastar para comparar"
-            ></button>
+            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+
+        <!-- 2 -->
+         <article class="card">
+          <h3 class="card__title">Golden Sunset</h3>
+          <p class="card__count badge">10 presets</p>
+          <p class="card_description">Presets com tons dourados, luz suave e aquele brilho de fim de tarde.</p>
+
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <div class="ba__labels">
+              <span class="ba__label ba__label--before">Antes</span>
+              <span class="ba__label ba__label--after">Depois</span>
+            </div>
+
+            <img class="ba__img is-before" src="img/sunset-before.webp" alt="sunset – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/sunset-after.webp" alt="sunset – depois" loading="lazy"
+              decoding="async">
+
+            <div class="ba__handle" aria-hidden="true"></div>
+            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card">
+          <h3 class="card__title">Copper & Cyan</h3>
+          <p class="card__count badge">15 presets</p>
+          <p class="card_description">Presets com contraste vibrante entre azuis profundos e tons alaranjados.</p>
+
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <div class="ba__labels">
+              <span class="ba__label ba__label--before">Antes</span>
+              <span class="ba__label ba__label--after">Depois</span>
+            </div>
+
+            <img class="ba__img is-before" src="img/cooper-before.webp" alt="cooper – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/cooper-after.webp" alt="cooper – depois" loading="lazy"
+              decoding="async">
+
+            <div class="ba__handle" aria-hidden="true"></div>
+            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+        <!-- 4 -->
+         <article class="card">
+          <h3 class="card__title">Shades of Silence</h3>
+          <p class="card__count badge">15 presets</p>
+          <p class="card_description">Presets em preto e branco, textura sutil e um toque atemporal.</p>
+
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <div class="ba__labels">
+              <span class="ba__label ba__label--before">Antes</span>
+              <span class="ba__label ba__label--after">Depois</span>
+            </div>
+
+            <img class="ba__img is-before" src="img/shades-before.webp" alt="shades – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/shades-after.webp" alt="shades – depois" loading="lazy"
+              decoding="async">
+
+            <div class="ba__handle" aria-hidden="true"></div>
+            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+        <!-- 5 -->
+         <article class="card">
+          <h3 class="card__title">Deep Wood</h3>
+          <p class="card__count badge">15 presets</p>
+          <p class="card_description">Presets com aparência leve e neutra, inspirados em tons de madeira.</p>
+
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <div class="ba__labels">
+              <span class="ba__label ba__label--before">Antes</span>
+              <span class="ba__label ba__label--after">Depois</span>
+            </div>
+
+            <img class="ba__img is-before" src="img/deep-before.webp" alt="deep – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/deep-after.webp" alt="deep – depois" loading="lazy"
+              decoding="async">
+
+            <div class="ba__handle" aria-hidden="true"></div>
+            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="card">
+          <h3 class="card__title">Noturno Neon</h3>
+          <p class="card__count badge">7 presets</p>
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <img class="ba__img is-before" src="img/noturno-before.webp" alt="Noturno – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/noturno-after.webp" alt="Noturno – depois" loading="lazy"
+              decoding="async">
+            <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob"
+              aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="card">
+          <h3 class="card__title">Viagem Cinemático</h3>
+          <p class="card__count badge">10 presets</p>
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <img class="ba__img is-before" src="img/viagem-before.webp" alt="Viagem – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/viagem-after.webp" alt="Viagem – depois" loading="lazy"
+              decoding="async">
+            <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob"
+              aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="card">
+          <h3 class="card__title">Minimal Clean</h3>
+          <p class="card__count badge">8 presets</p>
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <img class="ba__img is-before" src="img/minimal-before.webp" alt="Minimal – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/minimal-after.webp" alt="Minimal – depois" loading="lazy"
+              decoding="async">
+            <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob"
+              aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="card">
+          <h3 class="card__title">Loja Online</h3>
+          <p class="card__count badge">9 presets</p>
+          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
+            <img class="ba__img is-before" src="img/loja-before.webp" alt="Loja online – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after" src="img/loja-after.webp" alt="Loja online – depois" loading="lazy"
+              decoding="async">
+            <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob"
+              aria-label="Arrastar para comparar"></button>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA da seção -->
+      <div class="presets__cta">
+        <a href="#s5-oferta" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
+          Quero transformar minhas fotos agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Sessão Bônus Exclusivos -->
+  <section id="s4-bonus" class="section bonus-unificado" aria-label="Bônus Exclusivos">
+    <div class="container">
+
+      <!-- Cabeçalho da seção -->
+      <div class="bonus-head">
+        <span class="badge badge--bonus">Bônus Exclusivos</span>
+        <h2 class="h2 bonus-title">2 Bônus Premium para acelerar seus resultados</h2>
+        <p class="bonus-sub">
+          Ao garantir seus presets hoje, você recebe dois bônus exclusivos que tornam tudo mais fácil,
+          rápido e profissional — transformando seu Instagram e suas fotos de vez.
+        </p>
+      </div>
+
+      <!-- Bônus 1: Guia Instagram -->
+      <div class="bonus-block">
+        <div class="bonus-grid">
+          <div class="bonus-media">
+            <figure class="bonus-mockup" role="img" aria-label="Mockup do eBook Guia para um Instagram Atraente">
+              <img src="img/ebook-instagram.webp" alt="Capa do eBook Guia para um Instagram Atraente" loading="lazy"
+                decoding="async">
+            </figure>
+          </div>
+          <div class="bonus-copy">
+            <h3 class="bonus-name">Guia para um Instagram Atraente</h3>
+            <p class="bonus-desc">
+              Transforme seu perfil em uma vitrine irresistível que atrai seguidores e valoriza suas fotos.
+              Aprenda a organizar o feed, usar cores certas e criar uma estética de influenciador.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bônus 2: Remover Pessoas -->
+      <div class="bonus-block">
+        <div class="bonus-grid bonus-grid--reverse">
+          <div class="bonus-media">
+            <figure class="bonus-mockup" role="img" aria-label="Demonstração de remoção de pessoas">
+              <video class="bonus-video" autoplay muted loop playsinline preload="metadata"
+                poster="img/remove-people-poster.webp">
+                <source src="img/remove-people.mp4" type="video/mp4">
+                <img src="img/remove-people.gif" alt="Animação mostrando remoção de pessoas da foto">
+              </video>
+            </figure>
+          </div>
+          <div class="bonus-copy">
+            <h3 class="bonus-name">Remova Pessoas Indesejadas das Suas Fotos</h3>
+            <p class="bonus-desc">
+              Diga adeus às fotos arruinadas.
+              Remova estranhos ou elementos indesejados em segundos, direto do celular, sem precisar de Photoshop.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Final da seção -->
+      <div class="bonus-cta">
+        <a href="#s5-oferta" class="btn btn--primary btn--lg" aria-label="Quero meus presets e os bônus agora">
+          Quero meus presets e os bônus agora
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section id="s5-oferta" class="section offer" aria-label="Oferta Final">
+    <div class="container offer__inner">
+
+      <h2 class="h2 offer__title">Tudo o que você vai receber hoje</h2>
+
+      <!-- Checklist centralizado com ✔ -->
+      <ul class="offer__list">
+        <li>✔ Pacote completo com todos os presets</li>
+        <li>✔ Guia rápido de instalação</li>
+        <li>✔ Guia para um Instagram atraente</li>
+        <li>✔ Suporte VIP</li>
+        <li>✔ Acesso vitalício</li>
+        <li>✔ Garantia incondicional de 7 dias</li>
+      </ul>
+
+      <!-- Preço -->
+      <div class="offer__price">
+        <p class="old-price">De R$ 197,00</p>
+        <p class="new-price">Por apenas <strong>R$ 47,00</strong></p>
+      </div>
+
+      <!-- CTA principal -->
+      <div class="offer__cta">
+        <a href="#" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
+          Quero transformar minhas fotos agora
+        </a>
+        <p class="offer__microcopy"><em>Acesso imediato após a confirmação do pagamento</em></p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Sessão FAQ -->
+  <section id="faq" class="section faq" aria-label="Perguntas Frequentes">
+    <div class="container faq__inner">
+      <h2 class="h2 faq__title">Perguntas Frequentes</h2>
+
+      <div class="faq__list">
+
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            1. Preciso ter experiência em edição para usar os presets?
+          </button>
+          <div class="faq__answer">
+            <p>Não. Nossos presets foram feitos para qualquer pessoa, mesmo que nunca tenha editado uma foto. É só
+              instalar e aplicar com 1 clique.</p>
           </div>
         </div>
 
-        <!-- CTA (separado para poder reposicionar no mobile) -->
-        <div class="how__cta">
-          <a
-            href="#s5-oferta"
-            class="btn btn--primary btn--lg"
-            aria-label="Quero transformar minhas fotos agora"
-          >
-            Quero transformar minhas fotos agora
-          </a>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            2. Funciona em qualquer celular?
+          </button>
+          <div class="faq__answer">
+            <p>Sim. Você só precisa do aplicativo gratuito Lightroom Mobile, disponível para Android e iPhone.</p>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Sessão 3 — Presets em diferentes cenários -->
- 
-<section id="s3-presets-cenarios" class="section section--dark presets" aria-label="Presets em diferentes cenários">
-  <div class="container">
-    <header class="presets__head">
-      <h2 class="h2 presets__title">São vários presets para você usar em diferentes cenários</h2>
-      <p class="presets__sub">Arraste a linha para comparar em tempo real</p>
-    </header>
-
-    <!-- Grid de cards (9 itens) -->
-    <div class="cards">
-      <!-- 1 -->
-      <article class="card">
-        <h3 class="card__title">Urbano Cool</h3>
-        <p class="card__count badge">12 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/urbano-before.webp" alt="Urbano – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/urbano-after.webp"  alt="Urbano – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            3. Como eu recebo os presets depois da compra?
+          </button>
+          <div class="faq__answer">
+            <p>Logo após o pagamento ser aprovado, você recebe um e-mail com link para download imediato e acesso
+              vitalício.</p>
+          </div>
         </div>
-      </article>
 
-      <!-- 2 -->
-      <article class="card">
-        <h3 class="card__title">Praia Natural</h3>
-        <p class="card__count badge">10 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/praia-before.webp" alt="Praia – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/praia-after.webp"  alt="Praia – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            4. E se eu tiver dificuldade para instalar ou usar?
+          </button>
+          <div class="faq__answer">
+            <p>Você terá acesso ao nosso Guia Rápido de Instalação e ao Suporte Expresso, que responde qualquer dúvida
+              rapidamente.</p>
+          </div>
         </div>
-      </article>
 
-      <!-- 3 -->
-      <article class="card">
-        <h3 class="card__title">Comida Pop</h3>
-        <p class="card__count badge">8 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/comida-before.webp" alt="Comida – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/comida-after.webp"  alt="Comida – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            5. Posso perder o acesso aos arquivos com o tempo?
+          </button>
+          <div class="faq__answer">
+            <p>Não. O acesso é vitalício. Você pode baixar quantas vezes quiser e usar para sempre.</p>
+          </div>
         </div>
-      </article>
 
-      <!-- 4 -->
-      <article class="card">
-        <h3 class="card__title">Retratos Pele Natural</h3>
-        <p class="card__count badge">12 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/retratos-before.webp" alt="Retratos – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/retratos-after.webp"  alt="Retratos – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            6. E se eu não gostar do resultado?
+          </button>
+          <div class="faq__answer">
+            <p>Você tem 7 dias de garantia incondicional. Se não amar os resultados, devolvemos 100% do valor pago.</p>
+          </div>
         </div>
-      </article>
 
-      <!-- 5 -->
-      <article class="card">
-        <h3 class="card__title">Interior Aconchegante</h3>
-        <p class="card__count badge">9 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/interior-before.webp" alt="Interior – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/interior-after.webp"  alt="Interior – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
-        </div>
-      </article>
-
-      <!-- 6 -->
-      <article class="card">
-        <h3 class="card__title">Noturno Neon</h3>
-        <p class="card__count badge">7 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/noturno-before.webp" alt="Noturno – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/noturno-after.webp"  alt="Noturno – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
-        </div>
-      </article>
-
-      <!-- 7 -->
-      <article class="card">
-        <h3 class="card__title">Viagem Cinemático</h3>
-        <p class="card__count badge">10 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/viagem-before.webp" alt="Viagem – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/viagem-after.webp"  alt="Viagem – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
-        </div>
-      </article>
-
-      <!-- 8 -->
-      <article class="card">
-        <h3 class="card__title">Minimal Clean</h3>
-        <p class="card__count badge">8 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/minimal-before.webp" alt="Minimal – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/minimal-after.webp"  alt="Minimal – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
-        </div>
-      </article>
-
-      <!-- 9 -->
-      <article class="card">
-        <h3 class="card__title">Loja Online</h3>
-        <p class="card__count badge">9 presets</p>
-        <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-          <img class="ba__img is-before" src="img/loja-before.webp" alt="Loja online – antes" loading="lazy" decoding="async">
-          <img class="ba__img is-after"  src="img/loja-after.webp"  alt="Loja online – depois" loading="lazy" decoding="async">
-          <div class="ba__handle" aria-hidden="true"></div><button class="ba__knob" aria-label="Arrastar para comparar"></button>
-        </div>
-      </article>
-    </div>
-
-    <!-- CTA da seção -->
-    <div class="presets__cta">
-      <a href="#s5-oferta" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
-        Quero transformar minhas fotos agora
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Sessão Bônus Exclusivos -->
-<section id="s4-bonus" class="section bonus-unificado" aria-label="Bônus Exclusivos">
-  <div class="container">
-
-    <!-- Cabeçalho da seção -->
-    <div class="bonus-head">
-      <span class="badge badge--bonus">Bônus Exclusivos</span>
-      <h2 class="h2 bonus-title">2 Bônus Premium para acelerar seus resultados</h2>
-      <p class="bonus-sub">
-        Ao garantir seus presets hoje, você recebe dois bônus exclusivos que tornam tudo mais fácil, 
-        rápido e profissional — transformando seu Instagram e suas fotos de vez.
-      </p>
-    </div>
-
-    <!-- Bônus 1: Guia Instagram -->
-    <div class="bonus-block">
-      <div class="bonus-grid">
-        <div class="bonus-media">
-          <figure class="bonus-mockup" role="img" aria-label="Mockup do eBook Guia para um Instagram Atraente">
-            <img src="img/ebook-instagram.webp" alt="Capa do eBook Guia para um Instagram Atraente" loading="lazy" decoding="async">
-          </figure>
-        </div>
-        <div class="bonus-copy">
-          <h3 class="bonus-name">Guia para um Instagram Atraente</h3>
-          <p class="bonus-desc">
-            Transforme seu perfil em uma vitrine irresistível que atrai seguidores e valoriza suas fotos.  
-            Aprenda a organizar o feed, usar cores certas e criar uma estética de influenciador.
-          </p>
-        </div>
       </div>
     </div>
-
-    <!-- Bônus 2: Remover Pessoas -->
-    <div class="bonus-block">
-      <div class="bonus-grid bonus-grid--reverse">
-        <div class="bonus-media">
-          <figure class="bonus-mockup" role="img" aria-label="Demonstração de remoção de pessoas">
-            <video class="bonus-video" autoplay muted loop playsinline preload="metadata"
-                   poster="img/remove-people-poster.webp">
-              <source src="img/remove-people.mp4" type="video/mp4">
-              <img src="img/remove-people.gif" alt="Animação mostrando remoção de pessoas da foto">
-            </video>
-          </figure>
-        </div>
-        <div class="bonus-copy">
-          <h3 class="bonus-name">Remova Pessoas Indesejadas das Suas Fotos</h3>
-          <p class="bonus-desc">
-            Diga adeus às fotos arruinadas.  
-            Remova estranhos ou elementos indesejados em segundos, direto do celular, sem precisar de Photoshop.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTA Final da seção -->
-    <div class="bonus-cta">
-      <a href="#s5-oferta" class="btn btn--primary btn--lg" aria-label="Quero meus presets e os bônus agora">
-        Quero meus presets e os bônus agora
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-<section id="s5-oferta" class="section offer" aria-label="Oferta Final">
-  <div class="container offer__inner">
-
-    <h2 class="h2 offer__title">Tudo o que você vai receber hoje</h2>
-
-    <!-- Checklist centralizado com ✔ -->
-    <ul class="offer__list">
-      <li>✔ Pacote completo com todos os presets</li>
-      <li>✔ Guia rápido de instalação</li>
-      <li>✔ Guia para um Instagram atraente</li>
-      <li>✔ Suporte VIP</li>
-      <li>✔ Acesso vitalício</li>
-      <li>✔ Garantia incondicional de 7 dias</li>
-    </ul>
-
-    <!-- Preço -->
-    <div class="offer__price">
-      <p class="old-price">De R$ 197,00</p>
-      <p class="new-price">Por apenas <strong>R$ 47,00</strong></p>
-    </div>
-
-    <!-- CTA principal -->
-    <div class="offer__cta">
-      <a href="#" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
-        Quero transformar minhas fotos agora
-      </a>
-      <p class="offer__microcopy"><em>Acesso imediato após a confirmação do pagamento</em></p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Sessão FAQ -->
-<section id="faq" class="section faq" aria-label="Perguntas Frequentes">
-  <div class="container faq__inner">
-    <h2 class="h2 faq__title">Perguntas Frequentes</h2>
-
-    <div class="faq__list">
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          1. Preciso ter experiência em edição para usar os presets?
-        </button>
-        <div class="faq__answer">
-          <p>Não. Nossos presets foram feitos para qualquer pessoa, mesmo que nunca tenha editado uma foto. É só instalar e aplicar com 1 clique.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          2. Funciona em qualquer celular?
-        </button>
-        <div class="faq__answer">
-          <p>Sim. Você só precisa do aplicativo gratuito Lightroom Mobile, disponível para Android e iPhone.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          3. Como eu recebo os presets depois da compra?
-        </button>
-        <div class="faq__answer">
-          <p>Logo após o pagamento ser aprovado, você recebe um e-mail com link para download imediato e acesso vitalício.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          4. E se eu tiver dificuldade para instalar ou usar?
-        </button>
-        <div class="faq__answer">
-          <p>Você terá acesso ao nosso Guia Rápido de Instalação e ao Suporte Expresso, que responde qualquer dúvida rapidamente.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          5. Posso perder o acesso aos arquivos com o tempo?
-        </button>
-        <div class="faq__answer">
-          <p>Não. O acesso é vitalício. Você pode baixar quantas vezes quiser e usar para sempre.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__question" aria-expanded="false">
-          6. E se eu não gostar do resultado?
-        </button>
-        <div class="faq__answer">
-          <p>Você tem 7 dias de garantia incondicional. Se não amar os resultados, devolvemos 100% do valor pago.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
 
 
 
-    <!-- JS -->
-    <script src="main.js"></script>
-  </body>
+  <!-- JS -->
+  <script src="main.js"></script>
+</body>
+
 </html>
