@@ -385,13 +385,23 @@ body{
 
 /* Card */
 .card{
-  text-align: center;
+  /* text-align: center;
   background: linear-gradient(180deg, #111 0%, #0f0f0f 100%);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-lg);
   padding: 16px;
   box-shadow: 0 10px 28px rgba(0,0,0,0.28);
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease); */
+
+    text-align: center;
+  background: transparent; /* mesma cor da sessão */
+  border-top: 1px solid rgba(255,255,255,0.08); /* só topo */
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0; /* remove arredondamento */
+  padding: 2rem 0 2rem; /* remove padding */
+  box-shadow: none; /* remove sombra */
 }
 
 .card__title{
