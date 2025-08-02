@@ -232,7 +232,7 @@ body{
    ====================================== */
 .ba{
   --ba-max-w: 640px;
-  --ba-ratio: 4/5;
+  --ba-ratio: 1/1 !important; /* proporção padrão 1:1 */
   --pos: 50%;
 
   position: relative;
@@ -240,7 +240,7 @@ body{
   max-width: var(--ba-max-w);
   aspect-ratio: var(--ba-ratio);
   overflow: hidden;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   box-shadow: var(--glow-soft);
   user-select: none;
   touch-action: pan-y; /* permite rolagem vertical no mobile */
@@ -347,7 +347,7 @@ body{
   margin-top: 1.6rem;
   display: block;
   object-fit: cover;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
 }
 
 
