@@ -232,7 +232,7 @@ body{
    ====================================== */
 .ba{
   --ba-max-w: 640px;
-  --ba-ratio: 4/5;
+  --ba-ratio: 1/1 !important;
   --pos: 50%;
 
   position: relative;
