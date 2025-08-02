@@ -18,6 +18,7 @@
 <body>
   <!-- Sessão 1 — Hero -->
   <section id="s1-hero" class="hero section" aria-label="Seção principal de destaque">
+    
     <div class="hero__inner">
       <!-- Esquerda: texto + CTAs -->
       <div class="hero__copy">
@@ -67,34 +68,48 @@
       <div class="how__copy">
         <h2 class="h2">O que são Presets e como eles funcionam?</h2>
         <p class="how__text">
-          Os Presets são <strong>edições profissionais prontas</strong> que
-          você aplica em suas fotos <strong>direto do celular</strong> com
+          Os Presets são edições profissionais prontas que
+          você aplica em suas fotos direto do celular com
           apenas um toque.
         </p>
         <p class="how__text">
           Eles ajustam
-          <strong>cores, luz e contraste automaticamente</strong>, deixando
+          cores, luz e contraste automaticamente, deixando
           qualquer foto com
-          <strong>aparência profissional em segundos</strong>, sem precisar
+          aparência profissional em segundos, sem precisar
           saber nada de edição.
+        </p>
+
+        <p class="how__text">
+          Para usar os presets, você só precisa instalar o aplicativo gratuito Lightroom Mobile, disponível para Android
+          e iOS.
+        </p>
+
+        <p class="how__text italic">
+          * Arraste a linha para comparar a transformação em tempo real
         </p>
       </div>
 
       <!-- Comparador Antes/Depois (bem menor) -->
       <div class="how__ba">
-        <!--
-        Suba DUAS imagens em /img/:
-        - img/how-before.webp
-        - img/how-after.webp
-      -->
         <div class="ba ba--xs" data-start="50" aria-label="Comparador de imagem interativo">
+
+          <!-- Tarjas "Antes" e "Depois" -->
+          <div class="ba__labels">
+            <span class="ba__label ba__label--before">Antes</span>
+            <span class="ba__label ba__label--after">Depois</span>
+          </div>
+
+          <!-- Imagens -->
           <img class="ba__img is-before" src="img/how-before.webp" alt="Imagem antes" loading="lazy" decoding="async" />
           <img class="ba__img is-after" src="img/how-after.webp" alt="Imagem depois" loading="lazy" decoding="async" />
 
+          <!-- Linha e botão -->
           <div class="ba__handle" aria-hidden="true"></div>
           <button class="ba__knob" aria-label="Arrastar para comparar"></button>
         </div>
       </div>
+
 
       <!-- CTA (separado para poder reposicionar no mobile) -->
       <div class="how__cta">
@@ -188,7 +203,7 @@
             <button class="ba__knob" aria-label="Arrastar para comparar"></button>
           </div>
 
-           <img class="card__preview-grid" src="img/cooper-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+          <img class="card__preview-grid" src="img/cooper-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
             loading="lazy" decoding="async" />
         </article>
 
@@ -342,13 +357,16 @@
         </article>
 
 
-        <!-- CTA da seção -->
-        <div class="presets__cta">
-          <a href="#s5-oferta" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
-            Quero transformar minhas fotos agora
-          </a>
-        </div>
+
       </div>
+      <!-- CTA da seção -->
+      <div class="presets__cta">
+        <a href="#s5-oferta" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
+          Quero transformar minhas fotos agora
+        </a>
+      </div>
+
+      
   </section>
 
 
@@ -358,53 +376,42 @@
 
       <!-- Cabeçalho da seção -->
       <div class="bonus-head">
-        <span class="badge badge--bonus">Bônus Exclusivos</span>
         <h2 class="h2 bonus-title">2 Bônus Premium para acelerar seus resultados</h2>
         <p class="bonus-sub">
-          Ao garantir seus presets hoje, você recebe dois bônus exclusivos que tornam tudo mais fácil,
-          rápido e profissional — transformando seu Instagram e suas fotos de vez.
+          Ao garantir seus presets hoje, você recebe dois bônus exclusivos.
         </p>
       </div>
 
-      <!-- Bônus 1: Guia Instagram -->
+      <!-- Bônus 1 -->
       <div class="bonus-block">
-        <div class="bonus-grid">
-          <div class="bonus-media">
-            <figure class="bonus-mockup" role="img" aria-label="Mockup do eBook Guia para um Instagram Atraente">
-              <img src="img/ebook-instagram.webp" alt="Capa do eBook Guia para um Instagram Atraente" loading="lazy"
-                decoding="async">
-            </figure>
-          </div>
-          <div class="bonus-copy">
-            <h3 class="bonus-name">Guia para um Instagram Atraente</h3>
-            <p class="bonus-desc">
-              Transforme seu perfil em uma vitrine irresistível que atrai seguidores e valoriza suas fotos.
-              Aprenda a organizar o feed, usar cores certas e criar uma estética de influenciador.
-            </p>
-          </div>
-        </div>
+        <hr class="bonus-separator">
+        <span class="badge badge--bonus">Bônus 1</span>
+        <h3 class="bonus-name">Remova Pessoas Indesejadas das Suas Fotos</h3>
+        <p class="bonus-desc">
+          Diga adeus às fotos arruinadas.
+          Remova estranhos ou elementos indesejados em segundos, direto do celular, sem precisar de Photoshop.
+        </p>
+        <figure class="bonus-mockup" role="img" aria-label="Demonstração de remoção de pessoas">
+          <video class="bonus-video" autoplay muted loop playsinline preload="metadata"
+            poster="img/remove-people-poster.webp">
+            <source src="img/remove-people.mp4" type="video/mp4" />
+          </video>
+        </figure>
       </div>
 
-      <!-- Bônus 2: Remover Pessoas -->
+      <!-- Bônus 2 -->
       <div class="bonus-block">
-        <div class="bonus-grid bonus-grid--reverse">
-          <div class="bonus-media">
-            <figure class="bonus-mockup" role="img" aria-label="Demonstração de remoção de pessoas">
-              <video class="bonus-video" autoplay muted loop playsinline preload="metadata"
-                poster="img/remove-people-poster.webp">
-                <source src="img/remove-people.mp4" type="video/mp4">
-                <img src="img/remove-people.gif" alt="Animação mostrando remoção de pessoas da foto">
-              </video>
-            </figure>
-          </div>
-          <div class="bonus-copy">
-            <h3 class="bonus-name">Remova Pessoas Indesejadas das Suas Fotos</h3>
-            <p class="bonus-desc">
-              Diga adeus às fotos arruinadas.
-              Remova estranhos ou elementos indesejados em segundos, direto do celular, sem precisar de Photoshop.
-            </p>
-          </div>
-        </div>
+        <hr class="bonus-separator">
+        <span class="badge badge--bonus">Bônus 2</span>
+        <h3 class="bonus-name">Guia para um Instagram Atraente</h3>
+        <p class="bonus-desc">
+          Transforme seu perfil em uma vitrine irresistível que atrai seguidores e valoriza suas fotos.<br>
+          Aprenda a organizar o feed, usar cores certas e criar uma estética de influenciador.
+        </p>
+        <figure class="bonus-mockup" role="img" aria-label="Mockup do eBook Guia para um Instagram Atraente">
+          <img src="img/ebook-instagram.webp" alt="Capa do eBook Guia para um Instagram Atraente" loading="lazy"
+            decoding="async">
+        </figure>
       </div>
 
       <!-- CTA Final da seção -->
@@ -429,9 +436,11 @@
       <ul class="offer__list">
         <li>✔ Pacote completo com todos os presets</li>
         <li>✔ Guia rápido de instalação</li>
+        <li>✔ Guia prático de como remover pessoas de suas fotos</li>
         <li>✔ Guia para um Instagram atraente</li>
         <li>✔ Suporte VIP</li>
         <li>✔ Acesso vitalício</li>
+        <li>✔ Acesso a novas atualizações</li>
         <li>✔ Garantia incondicional de 7 dias</li>
       </ul>
 
@@ -449,6 +458,7 @@
         <p class="offer__microcopy"><em>Acesso imediato após a confirmação do pagamento</em></p>
       </div>
 
+      <img class="offer_img" src="/img/compra-segura-oferta.png" alt="">
     </div>
   </section>
 
