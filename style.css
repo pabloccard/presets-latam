@@ -91,10 +91,11 @@ body{
 .section--dark{ background: var(--bg-dark); color: var(--text-strong); }
 .container{ max-width: var(--container); margin: 0 auto; }
 .h2{
-  font-size: clamp(24px, 3.4vw, 36px);
-  font-weight: 800;
-  margin: 0 0 12px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 8px 0 8px;
   color: currentColor;
+  /* margin: 0; */
 }
 
 /* =================
@@ -370,7 +371,7 @@ body{
    =========================== */
 .presets__head{ text-align:center; margin-bottom: 28px; }
 .presets__title{ color: var(--gray-0); }
-.presets__sub{ color: var(--text-muted); font-size: 14px; margin: 6px 0 0; }
+.presets__sub{ color: var(--text-muted); font-size: 14px; margin: 8px 0 8px; }
 
 /* Grid dos cards */
 .cards{
@@ -405,7 +406,7 @@ body{
   box-shadow: 0 10px 28px rgba(0,0,0,0.28);
   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease); */
 
-    text-align: center;
+  text-align: center;
   background: transparent; /* mesma cor da sessão */
   border-top: 1px solid rgba(255,255,255,0.08); /* só topo */
   border-left: none;
@@ -419,7 +420,7 @@ body{
 .card__title{
   margin: 0 0 0.4rem;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--gray-0);
 }
 .card__count{ margin: 0 0 12px; font-size: 14px; color: var(--text-muted); }
@@ -429,7 +430,6 @@ body{
   color: var(--text-muted);
   margin: 0 0 12px;
   margin-bottom: 2rem;
-  padding-top: 0.5rem;
 }
 
 /* Badge do card */
@@ -473,8 +473,8 @@ body{
 .bonus-sub{ font-size: var(--fs-sub); color: var(--gray-700); }
 
 .badge--bonus{
-  background: var(--gray-100);
-  border: 1px solid var(--border-light);
+  background: rgba(28, 115, 255, 0.1);
+  border: 1px solid rgba(28, 115, 255, 1);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 800;
@@ -483,6 +483,7 @@ body{
   display: inline-block;
   padding: 6px 14px;
   margin-bottom: 10px;
+  color: rgba(28, 115, 255, 1);
 }
 
 .bonus-block{ margin-bottom: 48px; }
@@ -571,8 +572,8 @@ body{
 
 /* Texto do bônus */
 .bonus-copy{ text-align: left; }
-.bonus-name{ margin: 0 0 8px; font-weight: 800; font-size: 22px; }
-.bonus-desc{ margin: 0 0 12px; color: var(--gray-800); }
+.bonus-name{ margin: 0 0 8px; font-size: 1.4rem; font-weight: 200; }
+.bonus-desc{ margin: 0 0 12px; color: var(--gray-600); }
 
 /* Lista com check (genérica) */
 .list--check li{
@@ -616,16 +617,38 @@ body{
   display: inline-block;
   text-align: left;
 }
-.offer__list li{ margin: 10px 0; font-size: 16px; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+.offer__list li{ margin: 10px 0; font-size: 16px; text-align: center; color: var(--gray-300); font-size: 0.9rem; }
 
 .offer__price{ margin: 32px 0 24px; }
 .old-price{
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
   color: var(--text-muted);
   font-size: 16px;
   margin: 0;
 }
-.new-price{ font-size: 26px; font-weight: 700; margin: 4px 0 0; }
+
+.check {
+  color:rgb(28, 115, 255);
+}
+.old-price s {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px; /* ou 0.5px, 2px etc */
+}
+
+.new-price { margin: 4px 0 0; color: var(--text-muted); line-height: 3rem; }
+.new-price strong {
+  font-size: 3rem;
+  color: var(--text-strong);
+  margin: 0;
+  
+}
+
+.pagamento_unico {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
 
 .offer__cta{
   margin-top: 28px;
