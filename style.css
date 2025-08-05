@@ -500,14 +500,28 @@ body{
 
 .bonus-media{ display: flex; justify-content: center; }
 .bonus-mockup{
+  display: block;
   max-width: 520px; width: 100%;
   overflow: hidden;
   margin: 0;
   padding: 0;
   border: none;
   line-height: 0;
+ 
+  
   /* background-color: #000; */
 }
+
+
+
+.bonus-mockup img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
 
 .bonus-video {
   width: 100%;
@@ -519,6 +533,7 @@ body{
   padding: 0;
   background-color: transparent;
   border-radius: var(--radius-sm);
+  margin-top: 2rem;
   
 }
 
@@ -572,7 +587,7 @@ body{
 
 /* Texto do bônus */
 .bonus-copy{ text-align: left; }
-.bonus-name{ margin: 0 0 8px; font-size: 1.4rem; font-weight: 200; }
+.bonus-name{ margin: 0 0 8px; font-size: 1.4rem; font-weight: 200; margin-bottom: 1rem; margin-top: 1rem; }
 .bonus-desc{ margin: 0 0 12px; color: var(--gray-600); }
 
 /* Lista com check (genérica) */
@@ -846,6 +861,20 @@ body{
   .bonus-grid--reverse .bonus-media{ order: 1; }
   .bonus-grid--reverse .bonus-copy{ order: 2; }
 }
+
+.site-footer {
+  background: #0f0f0f; /* ou var(--gray-900) se estiver usando variables */
+  color: #aaa;
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
 
 /* ===========================
    RESPONSIVO – Mobile (≤ 700px)
