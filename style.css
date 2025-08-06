@@ -925,5 +925,5 @@ body{
 
 .ba__img.is-after.auto {
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
-  transition: clip-path 2s linear; 
+  transition: clip-path 1.5s linear; 
 }
