@@ -134,4 +134,19 @@ document.querySelectorAll('.faq__question').forEach(btn => {
   });
 });
 
+// (function () {
+//   const autos = document.querySelectorAll('.ba--auto');
+//   autos.forEach((wrap) => {
+//     let pos = 0;
+//     let direction = 1;
+
+//     setInterval(() => {
+//       pos += direction * 1; // velocidade
+//       if (pos >= 100 || pos <= 0) direction *= -1;
+
+//       wrap.style.setProperty('--pos', `${pos}%`);
+//     }, 20); // menor valor = mais suave
+//   });
+// })();
+
 

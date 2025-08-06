@@ -912,3 +912,18 @@ body{
 @media (max-width: 380px){
   .cards{ grid-template-columns: 1fr; }
 }
+
+@keyframes auto-compare {
+  0%   { --pos: 0%; }
+  50%  { --pos: 100%; }
+  100% { --pos: 0%; }
+}
+
+.ba--auto {
+  animation: auto-compare 6s ease-out infinite;
+}
+
+.ba__img.is-after.auto {
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+  transition: clip-path 2s linear; 
+}
