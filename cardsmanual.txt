@@ -226,3 +226,224 @@
 
 
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <!-- 1 -->
+        <article class="card">
+          <h3 class="card__title">Beach Day</h3>
+          <p class="card__count badge">10 presets exclusivos</p>
+          <p class="card_description">Uma coleção de presets pensada para quem transforma dias comuns na praia em
+            imagens memoráveis.</p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+            <div class="ba__labels">
+            </div>
+
+            <img class="ba__img is-before" src="img/beach-before.webp" alt="Urbano – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/beach-after.webp" alt="Urbano – depois" loading="lazy"
+              decoding="async">
+          </div>
+
+          <img class="card__preview-grid" src="img/beach-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+
+        <!-- 2 -->
+        <article class="card">
+          <h3 class="card__title">Golden Sunset</h3>
+          <p class="card__count badge">10 presets exclusivos</p>
+          <p class="card_description">Presets criados para capturar o calor da luz dourada e a beleza silenciosa do fim
+            do dia.</p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+
+            <img class="ba__img is-before" src="img/sunset-before.webp" alt="sunset – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/sunset-after.webp" alt="sunset – depois" loading="lazy"
+              decoding="async">
+          </div>
+
+          <img class="card__preview-grid" src="img/sunset-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+        <!-- 3 -->
+        <article class="card">
+          <h3 class="card__title">Dark Moody</h3>
+          <p class="card__count badge">14 presets exclusivos</p>
+          <p class="card_description">Presets desenvolvidos para quem prefere sombra, peso visual e composição discreta.
+          </p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+            <img class="ba__img is-before" src="img/dark-before.webp" alt="dark – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/dark-after.webp" alt="dark – depois" loading="lazy"
+              decoding="async">
+
+          </div>
+
+          <img class="card__preview-grid" src="img/dark-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+        <!-- 4 -->
+        <article class="card">
+          <h3 class="card__title">Shades of Silence</h3>
+          <p class="card__count badge">14 presets exclusivos</p>
+          <p class="card_description">Uma coleção de presets preto e branco feita para cenas que não precisam de cor
+            para dizer o que sentem.</p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+
+            <img class="ba__img is-before" src="img/shades-before.webp" alt="shades – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/shades-after.webp" alt="shades – depois" loading="lazy"
+              decoding="async">
+
+          </div>
+
+          <img class="card__preview-grid" src="img/shades-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+        <!-- 5 -->
+        <article class="card">
+          <h3 class="card__title">Coffee Mood</h3>
+          <p class="card__count badge">14 presets exclusivos</p>
+          <p class="card_description">Uma coleção de presets ideal para momentos simples, pausados e imagens que pedem
+            menos ruído e mais intenção.</p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+            <img class="ba__img is-before" src="img/coffee-before.webp" alt="coffee – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/coffee-after.webp" alt="coffee – depois" loading="lazy"
+              decoding="async">
+
+
+          </div>
+
+          <img class="card__preview-grid" src="img/coffee-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+        <!-- 6 -->
+        <article class="card">
+          <h3 class="card__title">Food Retouch</h3>
+          <p class="card__count badge">22 presets exclusivos</p>
+          <p class="card_description">Presets pensados para dar acabamento refinado em imagens de alimentos, sem perder
+            naturalidade.</p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+
+            <img class="ba__img is-before" src="img/food-before.webp" alt="food – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/food-after.webp" alt="food – depois" loading="lazy"
+              decoding="async">
+
+
+          </div>
+
+          <img class="card__preview-grid" src="img/food-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+        <!-- 7 -->
+        <article class="card">
+          <h3 class="card__title">Wedding Day</h3>
+          <p class="card__count badge">14 presets exclusivos</p>
+          <p class="card_description">Uma coleção de presets voltada para fotos de casamento, ideal para fotos de
+            cerimônia, making of e retratos com atmosfera natural.</p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+            <img class="ba__img is-before" src="img/wedding-before.webp" alt="wedding – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/wedding-after.webp" alt="wedding – depois" loading="lazy"
+              decoding="async">
+
+
+          </div>
+
+          <img class="card__preview-grid" src="img/wedding-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+
+        <!-- 8 -->
+        <article class="card">
+          <h3 class="card__title">Autumn Tones</h3>
+          <p class="card__count badge">14 presets exclusivos</p>
+          <p class="card_description">Presets desenvolvidos para trazer uma estética alinhada ao clima do outono. </p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+
+            <img class="ba__img is-before" src="img/autumn-before.webp" alt="autumn – antes" loading="lazy"
+              decoding="async">
+            <img class="ba__img is-after auto" src="img/autumn-after.webp" alt="autumn – depois" loading="lazy"
+              decoding="async">
+
+
+          </div>
+
+          <img class="card__preview-grid" src="img/autumn-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
+
+        <!-- 9 -->
+        <article class="card">
+          <h3 class="card__title">Gym Mood </h3>
+          
+          <p class="card_description">Presets pensados para criadores fitness, marcas pessoais e conteúdos produzidos em
+            academias ou estúdios.</p>
+
+          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
+
+
+            <img class="ba__img is-before" src="img/gym-before.webp" alt="gym – antes" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/gym-after.webp" alt="gym – depois" loading="lazy"
+              decoding="async">
+
+
+          </div>
+
+          <img class="card__preview-grid" src="img/gym-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
+            loading="lazy" decoding="async" />
+        </article>
