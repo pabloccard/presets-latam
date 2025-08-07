@@ -313,7 +313,7 @@ body{
 /* ======================================
    Before/After – CSS var + clip-path
    ====================================== */
-.ba{
+/* .ba{
   --ba-max-w: 640px;
   --ba-ratio: 3/4 !important;
   --pos: 50%;
@@ -326,22 +326,47 @@ body{
   border-radius: var(--radius-sm);
   box-shadow: var(--glow-soft);
   user-select: none;
-  touch-action: pan-y; /* permite rolagem vertical no mobile */
+  touch-action: pan-y; 
   background: var(--gray-200);
-}
-.ba--xs{ --ba-max-w: 360px; --ba-ratio: 3/4; }
+} */
 
-.ba__img{
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover; display: block;
+.ba {
+  --ba-max-w: 640px;
+  --pos: 50%;
+
+  position: relative;
+  width: 100%;
+  max-width: var(--ba-max-w);
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--glow-soft);
+  user-select: none;
+  touch-action: pan-y;
+  background: transparent;
+  display: inline-block;
 }
-.ba__img.is-before{ z-index: 1; }
-.ba__img.is-after{
+
+.ba__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.ba__img.is-before {
+  z-index: 1;
+  position: relative;
+}
+
+.ba__img.is-after {
   z-index: 2;
+  position: absolute;
+  inset: 0;
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
   will-change: clip-path;
 }
+
 
 .ba__handle{
   position: absolute; inset: 0 auto 0 0;
