@@ -53,7 +53,7 @@
   --gap-md: 28px;
 
   /* Tipografia */
-  --ff: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --ff: "Sora", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --fs-h1: clamp(28px, 4.2vw, 48px);
   --fs-sub: clamp(15px, 2vw, 18px);
   --fs-btn: 16px;
@@ -143,77 +143,147 @@ body{
 /* ===========
    HERO
    =========== */
-.hero{
-  position:relative;
-  overflow:hidden;
-  padding: var(--pad-section) 2rem;
-  background:
-    radial-gradient(1200px 500px at 85% 10%, rgba(28, 115, 255, 0.4), transparent 60%),
-    radial-gradient(900px 400px at 10% 90%, rgba(255,255,255,0.08), transparent 60%),
-    linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-dark-2) 100%);
-}
-.hero__inner{
-  margin:0 auto;
-  max-width:var(--container);
-  display:grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: var(--gap-lg);
-  align-items:center;
+
+.hero {
+   position: relative; /* ESSENCIAL */
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Texto do hero */
-.eyebrow{
-  display:inline-block;
-  font-size:var(--fs-eyebrow);
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--text);
-  padding:6px 10px;
-  border:1px solid var(--border-dark);
-  border-radius:999px;
-  margin-bottom:16px;
-  backdrop-filter:saturate(140%) blur(2px);
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: url('img/bg-hero.avif') center/cover no-repeat;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
 }
-.h1{
-  font-size: var(--fs-h1);
-  font-weight:600;
-  margin:0 0 14px;
-}
-.sub{
-  font-size: var(--fs-sub);
-  color:var(--text);
-  max-width:56ch;
-  margin:0 0 22px;
-}
-.cta-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  align-items:center;
-}
-.hero .btn{ margin-top: 2rem; }
 
-/* Mockup à direita */
-.hero__media{ position:relative; isolation:isolate }
-.mockup{
-  position:relative;
-  margin-inline:auto;
-  overflow:hidden;
-  transform:translateZ(0);
+.hero__inner {
+  display: flex;
+  align-items: center; /* <- CENTRALIZA as duas colunas na vertical */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+
 }
-.mockup img{
-  width:80%;
-  height:80%;
-  object-fit:cover;
-  display:block;
-  margin: auto;
+
+.hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
 }
-.mockup::after{
-  content:"";
-  position:absolute; inset:0;
-  pointer-events:none;
-  mix-blend-mode:screen;
+
+.hero__headline {
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--gray-200);
 }
+
+
+
+.hero__text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.hero__btn {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+  font-size: 1.25rem;
+
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  background-size: 200% auto;
+  background-position: left center;
+  margin-top: 3rem;
+  align-self: flex-start;
+  transition: all 0.5s ease;
+}
+
+.hero__btn:hover {
+  transform: translateY(-6px);
+  /* box-shadow: 0 8px 24px rgba(253, 29, 121, 0.4); */
+}
+.hero__image--desktop {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  /* align-items: flex-end; */
+}
+
+.hero__image--desktop img {
+  max-height: 600px;      /* Limita altura à da .hero__inner */
+  max-width: 100%;       /* Impede que fique larga demais */
+  height: auto;          /* Mantém proporção */
+  object-fit: contain;   /* Evita corte */
+  display: block;
+}
+
+/* Esconde a imagem do mobile no desktop */
+.hero__image--mobile {
+  display: none;
+  width: 100vw;
+  margin: 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0;
+  }
+
+  .hero__inner {
+    flex-direction: column;
+  }
+
+  .hero__image--mobile {
+    display: block;
+  }
+
+  .hero__image--desktop {
+    display: none;
+  }
+
+  .hero__content {
+    padding: 2rem ;
+    gap: 1rem;
+  }
+
+  .hero__headline {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .hero__text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .hero__btn {
+    align-self: center;
+    text-align: center;
+    font-size: 1.125rem;
+    margin-top: 1rem;
+  }
+}
+
 
 /* =========================================
    Sessão 2 – O que são & Como funcionam

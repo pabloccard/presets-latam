@@ -9,6 +9,15 @@
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
@@ -16,12 +25,12 @@
 </head>
 
 <body>
-  <!-- Sessão 1 — Hero -->
-  <section id="s1-hero" class="hero section" aria-label="Seção principal de destaque">
+  <!-- Sessão 1 — Hero
+  <section aria-label="Seção principal de destaque">
    
-    <div class="hero__inner">
-      <!-- Esquerda: texto + CTAs -->
-      <div class="hero__copy">
+    <div class="hero__inner"> -->
+  <!-- Esquerda: texto + CTAs -->
+  <!-- <div class="hero__copy">
      
 
         <h1 class="h1 reveal d2">
@@ -38,26 +47,57 @@
           <button id="cta-hero" class="btn btn--primary btn--lg" aria-label="Quero transformar minhas fotos agora">
             Quero transformar minhas fotos agora
           </button>
-
-          <!-- <a
-              href="#s3-presets-cenarios"
-              class="btn btn--ghost"
-              aria-label="Ver antes e depois"
-            >
-              Ver antes e depois
-            </a> -->
         </div>
-      </div>
+      </div> -->
 
-      <!-- Direita: mockup / imagem -->
-      <div class="hero__media reveal d3">
+  <!-- Direita: mockup / imagem -->
+  <!-- <div class="hero__media reveal d3">
         <figure class="mockup" role="img" aria-label="Mockup do celular exibindo edição de foto com presets">
-          <img src="img/hero-mockup.webp" alt="Tela de celular com foto antes e depois editada com preset"
+          <img src="img/hero.webp" alt="Tela de celular com foto antes e depois editada com preset"
             loading="eager" decoding="async" />
         </figure>
       </div>
     </div>
+  </section> -->
+
+  <section class="hero">
+    <!-- Imagem Mobile -->
+    
+      <img src="img/hero-mobile.webp" alt="Foto Mobile" class="hero__image--mobile" />
+      <div class="hero__bg"></div>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__headline">Transforme qualquer foto sua em uma foto profissional com apenas 1 clique.</h1>
+          <p class="hero__text">Nossos presets foram feitos para você editar suas fotos em segundos, direto do seu
+            celular, mesmo sem nenhuma experiência em edição.</p>
+          <a href="#comprar" class="hero__btn">Quero transformar minhas fotos agora</a>
+        </div>
+
+        <!-- Imagem Desktop -->
+        <div class="hero__image--desktop">
+          <img src="img/hero.webp" alt="Foto Desktop" />
+        </div>
+      </div>
+    
+
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- ######################## Sessão 2 — O que são e como funcionam -->
   <!-- Sessão 2 — O que são e como funcionam -->
@@ -130,12 +170,13 @@
       </header>
 
       <!-- Grid de cards (9 itens) -->
-        <div class="cards">
+      <div class="cards">
         <!-- 1 -->
         <article class="card">
           <h3 class="card__title">Beach Day</h3>
           <p class="card__count badge">10 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets pensada para quem transforma dias comuns na praia em imagens memoráveis.</p>
+          <p class="card_description">Uma coleção de presets pensada para quem transforma dias comuns na praia em
+            imagens memoráveis.</p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
             <div class="ba__labels">
@@ -156,7 +197,8 @@
         <article class="card">
           <h3 class="card__title">Golden Sunset</h3>
           <p class="card__count badge">10 presets exclusivos</p>
-          <p class="card_description">Presets criados para capturar o calor da luz dourada e a beleza silenciosa do fim do dia.</p>
+          <p class="card_description">Presets criados para capturar o calor da luz dourada e a beleza silenciosa do fim
+            do dia.</p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
 
@@ -175,7 +217,8 @@
         <article class="card">
           <h3 class="card__title">Dark Moody</h3>
           <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Presets desenvolvidos para quem prefere sombra, peso visual e composição discreta.</p>
+          <p class="card_description">Presets desenvolvidos para quem prefere sombra, peso visual e composição discreta.
+          </p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
 
@@ -194,7 +237,8 @@
         <article class="card">
           <h3 class="card__title">Shades of Silence</h3>
           <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets preto e branco feita para cenas que não precisam de cor para dizer o que sentem.</p>
+          <p class="card_description">Uma coleção de presets preto e branco feita para cenas que não precisam de cor
+            para dizer o que sentem.</p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
 
@@ -214,13 +258,15 @@
         <article class="card">
           <h3 class="card__title">Coffee Mood</h3>
           <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets ideal para momentos simples, pausados e imagens que pedem menos ruído e mais intenção.</p>
+          <p class="card_description">Uma coleção de presets ideal para momentos simples, pausados e imagens que pedem
+            menos ruído e mais intenção.</p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
 
             <img class="ba__img is-before" src="img/coffee-before.webp" alt="coffee – antes" loading="lazy"
               decoding="async">
-            <img class="ba__img is-after auto" src="img/coffee-after.webp" alt="coffee – depois" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/coffee-after.webp" alt="coffee – depois" loading="lazy"
+              decoding="async">
 
 
           </div>
@@ -233,16 +279,18 @@
         <article class="card">
           <h3 class="card__title">Food Retouch</h3>
           <p class="card__count badge">22 presets exclusivos</p>
-          <p class="card_description">Presets pensados para dar acabamento refinado em imagens de alimentos, sem perder naturalidade.</p>
+          <p class="card_description">Presets pensados para dar acabamento refinado em imagens de alimentos, sem perder
+            naturalidade.</p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-        
+
 
             <img class="ba__img is-before" src="img/food-before.webp" alt="food – antes" loading="lazy"
               decoding="async">
-            <img class="ba__img is-after auto" src="img/food-after.webp" alt="food – depois" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/food-after.webp" alt="food – depois" loading="lazy"
+              decoding="async">
 
-            
+
           </div>
 
           <img class="card__preview-grid" src="img/food-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
@@ -253,16 +301,17 @@
         <article class="card">
           <h3 class="card__title">Wedding Day</h3>
           <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets voltada para fotos de casamento, ideal para fotos de cerimônia, making of e retratos com atmosfera natural.</p>
+          <p class="card_description">Uma coleção de presets voltada para fotos de casamento, ideal para fotos de
+            cerimônia, making of e retratos com atmosfera natural.</p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-      
+
             <img class="ba__img is-before" src="img/wedding-before.webp" alt="wedding – antes" loading="lazy"
               decoding="async">
             <img class="ba__img is-after auto" src="img/wedding-after.webp" alt="wedding – depois" loading="lazy"
               decoding="async">
 
-          
+
           </div>
 
           <img class="card__preview-grid" src="img/wedding-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
@@ -277,13 +326,14 @@
           <p class="card_description">Presets desenvolvidos para trazer uma estética alinhada ao clima do outono. </p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-        
+
 
             <img class="ba__img is-before" src="img/autumn-before.webp" alt="autumn – antes" loading="lazy"
               decoding="async">
-            <img class="ba__img is-after auto" src="img/autumn-after.webp" alt="autumn – depois" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/autumn-after.webp" alt="autumn – depois" loading="lazy"
+              decoding="async">
 
-     
+
           </div>
 
           <img class="card__preview-grid" src="img/autumn-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
@@ -294,17 +344,17 @@
         <article class="card">
           <h3 class="card__title">Gym Mood</h3>
           <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Presets pensados para criadores fitness, marcas pessoais e conteúdos produzidos em academias ou estúdios.</p>
+          <p class="card_description">Presets pensados para criadores fitness, marcas pessoais e conteúdos produzidos em
+            academias ou estúdios.</p>
 
           <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-          
 
-            <img class="ba__img is-before" src="img/gym-before.webp" alt="gym – antes" loading="lazy"
-              decoding="async">
+
+            <img class="ba__img is-before" src="img/gym-before.webp" alt="gym – antes" loading="lazy" decoding="async">
             <img class="ba__img is-after auto" src="img/gym-after.webp" alt="gym – depois" loading="lazy"
               decoding="async">
 
-            
+
           </div>
 
           <img class="card__preview-grid" src="img/gym-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
@@ -321,7 +371,7 @@
         </a>
       </div>
 
-      
+
   </section>
 
 
@@ -397,17 +447,17 @@
         <li> <span class="check">✔</span> Garantia incondicional de 7 dias</li>
         <li> <span class="check">✔</span> Acesso vitalício</li>
         <li> <span class="check">✔</span> Suporte VIP</li>
-        
+
       </ul>
 
       <!-- Preço -->
       <div class="offer__price">
-        <p class="old-price"> De <s>$ 99,00</s> por apenas:  </p>
-        
-          
+        <p class="old-price"> De <s>$ 99,00</s> por apenas: </p>
+
+
         <p class="new-price"> <strong>$ 9,97</strong></p>
         <p class="pagamento_unico">* pagamento único</p>
-      
+
       </div>
 
       <!-- CTA principal -->
@@ -492,11 +542,11 @@
   </section>
 
   <footer class="site-footer">
-  <div class="container">
-    <p>Prime Presets © 2025. <br>
-      Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <div class="container">
+      <p>Prime Presets © 2025. <br>
+        Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
 
 
