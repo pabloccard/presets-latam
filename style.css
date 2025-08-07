@@ -207,6 +207,8 @@ body {
   margin: 0;
   color: var(--gray-200);
   font-weight: 600;
+  text-transform: capitalize;
+ 
 }
 
 .hero__text {
@@ -933,6 +935,10 @@ body {
   align-items: center;
   gap: 8px;
 }
+
+.offer__cta a {
+  margin: auto;
+}
 .btn--lg {
   padding: 18px 32px;
   font-size: 18px;
@@ -1317,4 +1323,23 @@ body {
 .ba__img.is-after.auto {
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
   transition: clip-path 1.5s linear;
+}
+
+
+.ba__label-dynamic {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  pointer-events: none;
+  backdrop-filter: blur(3px);
+  transition: opacity 0.3s ease;
+  opacity: 1;
 }
