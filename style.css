@@ -427,7 +427,7 @@ body{
 .card__preview-grid {
   width: 100%;
   border-radius: 12px;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   margin-bottom: 1rem;
   display: block;
   object-fit: cover;
@@ -500,7 +500,7 @@ body{
   font-size: 14px;
   color: var(--text-muted);
   margin: 0 0 12px;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 /* Badge do card */
