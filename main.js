@@ -39,7 +39,7 @@
     const timeout = setTimeout(() => {
       label.textContent = newText;
       label.style.opacity = '1';
-    }, 900); // ⏱ atraso de 300ms (ajustável)
+    }, 100); // ⏱ atraso de 300ms (ajustável)
 
     labelTimers.set(label, timeout);
   }

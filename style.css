@@ -266,44 +266,119 @@ body {
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .hero {
+    position: relative;
     padding: 0;
+    padding-bottom: 2rem;
   }
 
-  .hero__inner {
-    flex-direction: column;
-  }
-
-  .hero__image--mobile {
+   .hero__image--mobile {
     display: block;
-
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+    z-index: 0;
   }
 
+   .hero__content {
+    bottom: 0;
+  }
   .hero__image--desktop {
     display: none;
   }
 
+  .hero__inner {
+    display: block; /* remove o flex no mobile */
+  }
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0.95) 35%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.1) 65%,
+    rgba(0, 0, 0, 0.1) 80%,
+    rgba(0, 0, 0, 0.02) 90%,
+    rgba(0, 0, 0, 0) 95%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+
+
   .hero__content {
-    padding: 2rem;
-    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 90%;
+    padding: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
   }
 
   .hero__headline {
     font-size: 1.85rem;
-    text-align: center;
   }
 
   .hero__text {
     font-size: 1rem;
-    text-align: center;
   }
 
   .hero__btn {
-    align-self: center;
-    text-align: center;
     font-size: 1rem;
     margin-top: 1rem;
+    margin: auto;
   }
 }
+
+@media (max-width: 1024px) {
+  .hero__image--mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero__image--mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    z-index: 0;
+  }
+
+  .hero__content {
+    bottom: 3rem; /* sobe o conteúdo no tablet */
+  }
+}
+
+
 
 /* =========================================
    Sessão 2 – O que são & Como funcionam
@@ -1322,7 +1397,7 @@ body {
 
 .ba__img.is-after.auto {
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
-  transition: clip-path 1.5s linear;
+  transition: clip-path 750ms linear;
 }
 
 
