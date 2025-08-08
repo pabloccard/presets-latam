@@ -16,6 +16,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+
 
 
   <!-- CSS -->
@@ -23,23 +25,24 @@
 </head>
 
 <body>
-  <section class="hero">
-  <div class="hero__mobile-wrapper">
-    <img src="img/novohero.webp" alt="Foto Mobile" class="hero__image--mobile" />
-    <div class="hero__content">
-      <h1 class="hero__headline">Transforme qualquer foto sua em uma foto profissional com apenas <span class="text-gradient">1 clique</span></h1>
-      <p class="hero__text">Nossos presets foram feitos para você editar suas fotos em segundos, direto do seu celular, mesmo sem nenhuma experiência em edição.</p>
-      <a href="#comprar" class="hero__btn">Quero transformar minhas fotos agora</a>
-    </div>
-  </div>
-
+ <section class="hero">
+  <img src="img/novohero.webp" alt="Foto Mobile" class="hero__image--mobile" />
   <div class="hero__bg"></div>
 
-  <!-- Imagem Desktop -->
-  <div class="hero__image--desktop">
-    <img src="img/hero.webp" alt="Foto Desktop" />
+  <div class="hero__inner  ">
+    <div class="hero__content">
+      <h1 data-animate style="transition-delay: 0ms" class="hero__headline" >Transforme qualquer foto sua em uma foto profissional com apenas <span class="text-gradient">1 clique</span></h1>
+      <p data-animate style="transition-delay: 200ms" class="hero__text">Nossos presets foram feitos para você editar suas fotos em segundos, direto do seu celular, mesmo sem nenhuma experiência em edição.</p>
+      <a data-animate style="transition-delay: 400ms" href="#comprar" class="hero__btn ">Quero transformar minhas fotos</a>
+      
+    </div>
+
+    <div class="hero__image--desktop">
+      <img src="img/hero.webp" alt="Foto Desktop" />
+    </div>
   </div>
 </section>
+
 
 
   <!-- Sessão 2 — O que são e como funcionam -->
@@ -106,8 +109,8 @@
 
   <section id="s3-presets-cenarios" class="section section--dark presets" aria-label="Presets em diferentes cenários">
     <div class="container">
-      <header class="presets__head">
-        <h2 class="h2 presets__title">  São Dezenas de Presets Para <span class="text-gradient">Você Usar</span>  em Diferentes Cenários</h2>
+      <header data-animate style="transition-delay: 0ms" class="presets__head">
+        <h2  class="h2 presets__title">  São Dezenas de Presets Para <span class="text-gradient">Você Usar</span>  em Diferentes Cenários</h2>
         <p class="presets__sub">Com nossos presets, suas fotos ganham cor, presença e estilo em segundos.</p>
       </header>
 
@@ -117,18 +120,18 @@
 
         <!-- 10 -->
         <article class="card">
-          <h3 class="card__title">Skin Retouch <p class="card__count badge">24 presets</p>
+          <h3 data-animate style="transition-delay: 100ms" class="card__title">Skin Retouch <p class="card__count badge">24 presets</p>
           </h3>
 
 
 
 
-          <p class="card_description">Uma coleção de presets criada para valorizar a naturalidade da pele, seja em tons
+          <p data-animate style="transition-delay: 200ms" class="card_description">Uma coleção de presets criada para valorizar a naturalidade da pele, seja em tons
             claros ou escuros.</p>
           <!-- <img class="card__preview-grid" src="img/teste.png" alt="Exemplos de fotos com o efeito aplicado"
             loading="lazy" decoding="async" /> -->
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div data-animate style="transition-delay: 300ms" class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/skin-before.webp" alt="gym – antes" loading="lazy" decoding="async">
@@ -487,7 +490,25 @@
 
 
   <!-- JS -->
+ 
+
+
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target); // remove se não quiser repetir
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+</script>
+
   <script src="main.js"></script>
+
+  
 </body>
 
 </html>

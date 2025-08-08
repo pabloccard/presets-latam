@@ -170,6 +170,8 @@ body {
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+    /* min-height: calc(var(--vh, 1vh) * 100); */
+
 }
 
 .hero__bg {
@@ -208,7 +210,6 @@ body {
   color: var(--gray-200);
   font-weight: 600;
   text-transform: capitalize;
- 
 }
 
 .hero__text {
@@ -270,29 +271,25 @@ body {
     padding: 0;
   }
 
-  .hero__bg {
-    display: none;
+  .hero__image--mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    z-index: 0;
   }
 
   .hero__image--desktop {
     display: none;
   }
 
-  .hero__mobile-wrapper {
-    position: relative;
-    width: 100%;
+  .hero__inner {
     display: block;
   }
 
-  .hero__image--mobile {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-  }
-
-  .hero__mobile-wrapper::after {
+  .hero::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -302,12 +299,12 @@ body {
     background: linear-gradient(
       to top,
       rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 1) 20%,
-      rgba(0, 0, 0, 0.95) 35%,
+      rgba(0, 0, 0, 1) 25%,
       rgba(0, 0, 0, 0.8) 50%,
       rgba(0, 0, 0, 0.5) 65%,
-      rgba(0, 0, 0, 0.2) 80%,
-      rgba(0, 0, 0, 0.05) 90%,
+      rgba(0, 0, 0, 0.1) 75%,
+      rgba(0, 0, 0, 0) 85%,
+      rgba(0, 0, 0, 0) 95%,
       transparent 100%
     );
     z-index: 1;
@@ -315,21 +312,21 @@ body {
   }
 
   .hero__content {
-  position: relative;
-  margin: auto;
-  margin-top: -30vh; /* começa exatamente após metade da altura da viewport */
-  z-index: 2;
-  padding: 1rem;
-  width: 100%;
-  max-width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: white;
-  box-sizing: border-box;
-  padding-bottom: 3rem;
-}
+    position: relative;
+    margin: auto;
+    z-index: 2;
+    margin-top: -80%; /* sobe o conteúdo para que comece após ~50% da imagem */
+    padding: 0.75rem;
+    width: 100%;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+  }
 
   .hero__headline {
     font-size: 1.85rem;
@@ -343,8 +340,10 @@ body {
     font-size: 1rem;
     margin-top: 1rem;
     margin: auto;
+    width: 100%;
   }
 }
+
 
 
 
@@ -1405,4 +1404,15 @@ body {
   backdrop-filter: blur(3px);
   transition: opacity 0.3s ease;
   opacity: 1;
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px); /* vem de baixo */
+  transition: all 0.8s ease-out;
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0);
 }
