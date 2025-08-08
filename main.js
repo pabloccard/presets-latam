@@ -157,3 +157,5 @@ document.querySelectorAll(".faq__question").forEach((btn) => {
 //     }, 20); // menor valor = mais suave
 //   });
 // })();
+
+//ai papai
