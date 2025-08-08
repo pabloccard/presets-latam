@@ -44,11 +44,6 @@
     labelTimers.set(label, timeout);
   }
 
-  // Atualiza todas as .ba a cada 100ms
-  setInterval(() => {
-    document.querySelectorAll(".ba").forEach(updateLabel);
-  }, 100);
-
   // Comparador por arraste
   wraps.forEach((wrap) => {
     let start = parseFloat(wrap.getAttribute("data-start"));
@@ -70,6 +65,7 @@
       const r = rect();
       const p = ((clientX - r.left) / r.width) * 100;
       setPos(p);
+      updateLabel(wrap); // Atualiza o rótulo ao mover
     }
 
     let dragging = false;
@@ -143,17 +139,14 @@ document.querySelectorAll(".faq__question").forEach((btn) => {
   });
 });
 
-// (function () {
-//   const autos = document.querySelectorAll('.ba--auto');
-//   autos.forEach((wrap) => {
-//     let pos = 0;
-//     let direction = 1;
+// Animação de entrada com IntersectionObserver
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target); // Garante que a animação ocorra apenas uma vez
+    }
+  });
+});
 
-//     setInterval(() => {
-//       pos += direction * 1; // velocidade
-//       if (pos >= 100 || pos <= 0) direction *= -1;
-
-//       wrap.style.setProperty('--pos', `${pos}%`);
-//     }, 20); // menor valor = mais suave
-//   });
-// })();
+document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
