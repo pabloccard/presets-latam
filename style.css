@@ -935,32 +935,62 @@ body {
   margin: 0 auto;
 }
 .offer__title {
-  margin-bottom: 28px;
+  /* margin-bottom: 28px; */
+}
+
+.offer__subtitle {
+  color: var(--text-muted);
+}
+
+.offer__receber {
+
+  margin: 0;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  
+}
+
+.offer__text {
+ margin: 0;
+ margin-bottom: 3rem;
 }
 
 /* Checklist centralizado (texto à esquerda) */
 .offer__list {
   list-style: none;
   padding: 0;
-  margin: 0 auto 28px;
+  margin: 0 auto;
   display: inline-block;
   text-align: left;
 }
 .offer__list li {
-  margin: 10px 0;
-  font-size: 16px;
+  margin: 6px 0;
   text-align: center;
   color: var(--gray-300);
-  font-size: 0.9rem;
+  font-size: 0.925rem;
+  font-weight: lighter;
+}
+
+.offer__list li strong {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.aviso {
+  color: var(--gray-400);
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .offer__price {
-  margin: 32px 0 24px;
+  margin: 3rem 0 0;
 }
 .old-price {
   /* text-decoration: line-through; */
-  color: var(--text-muted);
-  font-size: 16px;
+  color: var(--gray-200);
+  font-size: 1.25rem;
   margin: 0;
 }
 
@@ -973,25 +1003,29 @@ body {
 }
 
 .new-price {
-  margin: 4px 0 0;
+  margin: 0.5rem 0 0;
   color: var(--text-muted);
   line-height: 3rem;
 }
 .new-price strong {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--text-strong);
   margin: 0;
 }
 
+.tempo {
+  color: #fff;
+}
+
 .pagamento_unico {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 0;
   color: var(--text-muted);
   font-style: italic;
 }
 
 .offer__cta {
-  margin-top: 28px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
