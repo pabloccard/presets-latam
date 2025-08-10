@@ -31,11 +31,11 @@
 
     <div class="hero__inner  ">
       <div data-animate style="transition-delay: 0ms" class="hero__content">
-        <h1 class="hero__headline">Transforme qualquer foto sua em uma foto
+        <h1  class="hero__headline">Transforme qualquer foto sua em uma foto
           profissional com apenas <span class="text-gradient">1 clique</span></h1>
         <p class="hero__text">Nossos presets foram feitos para você editar
           suas fotos em segundos, direto do seu celular, mesmo sem nenhuma experiência em edição.</p>
-        <a href="#s3-presets-cenarios" class="hero__btn ">Quero transformar minhas
+        <a href="#comprar" class="hero__btn ">Quero transformar minhas
           fotos</a>
 
       </div>
@@ -51,60 +51,56 @@
   <!-- Sessão 2 — O que são e como funcionam -->
   <section id="s2-o-que-e-como-funciona" class="section section--light how"
     aria-label="O que são presets e como funcionam">
-    <div class="container how__grid">
-      <!-- (Opcional) Coluna da imagem/comparador -->
-      <div class="how__ba">
+   <div class="container how__grid">
+  <!-- (Opcional) Coluna da imagem/comparador -->
+  <div class="how__ba">
+    
+          <div class="ba ba--card ba--auto" style="border-radius: 10px;" data-start="50"
+            aria-label="Comparador de imagem interativo">
+            <div class="ba__label-dynamic">Antes</div>
 
-        <div class="ba ba--card ba--auto" style="border-radius: 10px;" data-start="50"
-          aria-label="Comparador de imagem interativo">
-          <div class="ba__label-dynamic">Antes</div>
+            <img style="border-radius: 10px;" class="ba__img is-before" src="img/how-before.webp" alt="" loading="lazy" decoding="async">
+            <img style="border-radius: 10px;" class="ba__img is-after auto" src="img/how-after.webp" alt="" loading="lazy"
+              decoding="async">
+          </div>
+        
+  </div>
 
-          <img style="border-radius: 10px;" class="ba__img is-before" src="img/how-before.webp" alt="" loading="lazy"
-            decoding="async">
-          <img style="border-radius: 10px;" class="ba__img is-after auto" src="img/how-after.webp" alt="" loading="lazy"
-            decoding="async">
-        </div>
+  <!-- Texto -->
+  <div class="how__copy">
+    <h2 class="h2">
+      O que são Presets e como eles vão
+      <span class="text-gradient">transformar</span> suas fotos
+    </h2>
 
-      </div>
+    <div class="how__cards">
+      <article class="how__card">
+        <span class="how__badge">1</span>
+        <p>Presets são edições prontas criadas por profissionais, que funcionam no celular, sejá ele Android ou iPhone.</p>
+        </p>
+      </article>
 
-      <!-- Texto -->
-      <div class="how__copy">
-        <h2 class="h2">
-          O que são Presets e como eles vão
-          <span class="text-gradient">transformar</span> suas fotos
-        </h2>
+      <article class="how__card">
+        <span class="how__badge">2</span>
+        <p>Com um único toque, ajustam cor, luz e contraste automaticamente, deixando suas fotos com aparência profissional em menos de 5 segundos.</p>
+      </article>
 
-        <div class="how__cards">
-          <article class="how__card">
-            <span class="how__badge">1</span>
-            <p>Presets são edições prontas criadas por profissionais, que funcionam no celular, sejá ele Android ou
-              iPhone.</p>
-            </p>
-          </article>
+      <article class="how__card">
+        <span class="how__badge">3</span>
+        <p>Não precisa ser fotógrafo nem entender de edição, instale o app gratuito Lightroom Mobile, escolha o preset e pronto.</p>
+      </article>
+    </div>
+  </div>
 
-          <article class="how__card">
-            <span class="how__badge">2</span>
-            <p>Com um único toque, ajustam cor, luz e contraste automaticamente, deixando suas fotos com aparência
-              profissional em menos de 5 segundos.</p>
-          </article>
-
-          <article class="how__card">
-            <span class="how__badge">3</span>
-            <p>Não precisa ser fotógrafo nem entender de edição, instale o app gratuito Lightroom Mobile, escolha o
-              preset e pronto.</p>
-          </article>
-        </div>
-      </div>
-
-
+      
 
 
       <!-- CTA (separado para poder reposicionar no mobile) -->
-
-      <!-- <a href="#s5-oferta" class="hero__btn" aria-label="Quero transformar minhas fotos agora">
-        Quero transformar minhas fotos agora
-      </a> -->
-
+      
+        <a href="#s5-oferta" class="hero__btn" aria-label="Quero transformar minhas fotos agora">
+          Quero transformar minhas fotos agora
+        </a>
+      
     </div>
   </section>
 
@@ -116,8 +112,8 @@
         <!-- <h2 class="h2 presets__title"> São Dezenas de Presets Para <span class="text-gradient">Você Usar</span> em
           Diferentes Cenários</h2> -->
 
-        <h2 class="h2 presets__title">São Vários Presets Para <span class="text-gradient">Todos</span> os Cenários </h2>
-        <p class="presets__sub">Você recebe mais de 130 presets pensados para diferentes estilos e momentos.
+          <h2 class="h2 presets__title"> Presets para <span class="text-gradient">todos</span>  os cenários </h2>
+        <p class="presets__sub">Você recebe dezenas de presets pensados para diferentes estilos e momentos.
 
           É só escolher o que combina com sua foto e ver a mágica acontecer.</p>
       </header>
@@ -128,14 +124,16 @@
 
         <!-- Skin Retouch -->
         <article class="card">
-          <h3 class="card__title">Skin Retouch <p class="card__count badge">24 presets</p>
+          <h3 class="card__title">Skin Retouch <p
+              class="card__count badge">24 presets</p>
           </h3>
 
           <p class="card_description">Uma coleção de presets criada para
             valorizar a naturalidade da pele, seja em tons
             claros ou escuros.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/skin-before.webp" alt="gym – antes" loading="lazy" decoding="async">
@@ -148,34 +146,37 @@
 
         <!-- Dark Moody -->
         <article class="card">
-          <h3 class="card__title">Dark Moody <p class="card__count badge">14 presets</p>
+          <h3 class="card__title">Dark Moody <p
+              class="card__count badge">14 presets</p>
           </h3>
 
-          <p class="card_description">Presets desenvolvidos para quem prefere sombra, peso visual e composição discreta.
-          </p>
+          <p class="card_description">Presets desenvolvidos para quem prefere sombra, peso visual e composição discreta.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/dark-before.webp" alt="" loading="lazy" decoding="async">
-            <img class="ba__img is-after auto" src="img/dark-after.webp" alt="" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/dark-after.webp" alt="" loading="lazy"
+              decoding="async">
           </div>
         </article>
 
 
         <!-- Beach Day -->
         <article class="card">
-          <h3 class="card__title">Beach Day <p class="card__count badge">10 presets</p>
+          <h3 class="card__title">Beach Day <p
+              class="card__count badge">10 presets</p>
           </h3>
 
           <p class="card_description">Uma coleção de presets pensada para quem transforma dias comuns na praia em
             imagens memoráveis.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
-            <img class="ba__img is-before" src="img/beach-before.webp" alt="gym – antes" loading="lazy"
-              decoding="async">
+            <img class="ba__img is-before" src="img/beach-before.webp" alt="gym – antes" loading="lazy" decoding="async">
             <img class="ba__img is-after auto" src="img/beach-after.webp" alt="gym – depois" loading="lazy"
               decoding="async">
           </div>
@@ -184,73 +185,102 @@
 
         <!-- Wedding Day -->
         <article class="card">
-          <h3 class="card__title">Wedding Day <p class="card__count badge">22 presets</p>
+          <h3 class="card__title">Wedding Day <p
+              class="card__count badge">22 presets</p>
           </h3>
 
           <p class="card_description">Uma coleção de presets voltada para fotos de casamento, ideal para fotos de
             cerimônia, making of e retratos com atmosfera natural.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/wedding-before.webp" alt="" loading="lazy" decoding="async">
-            <img class="ba__img is-after auto" src="img/wedding-after.webp" alt="" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/wedding-after.webp" alt="" loading="lazy"
+              decoding="async">
           </div>
         </article>
 
 
         <!-- Golden Sunset -->
         <article class="card">
-          <h3 class="card__title">Golden Sunset <p class="card__count badge">10 presets</p>
+          <h3 class="card__title">Golden Sunset <p
+              class="card__count badge">10 presets</p>
           </h3>
 
           <p class="card_description">Presets criados para capturar o calor da luz dourada e a beleza silenciosa do fim
             do dia.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/golden-before.webp" alt="" loading="lazy" decoding="async">
-            <img class="ba__img is-after auto" src="img/golden-after.webp" alt="" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/golden-after.webp" alt="" loading="lazy"
+              decoding="async">
           </div>
         </article>
 
 
+        <!-- Black e white -->
+        <article class="card">
+          <h3 class="card__title">Black & White <p
+              class="card__count badge">12 presets</p>
+          </h3>
 
+          <p class="card_description">Uma coleção de presets preto e branco feita para cenas que não precisam de cor
+            para dizer o que sentem.</p>
 
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
+            <div class="ba__label-dynamic">Antes</div>
+
+            <img class="ba__img is-before" src="img/black-before.webp" alt="" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/black-after.webp" alt="" loading="lazy"
+              decoding="async">
+          </div>
+        </article>
+        
 
 
         <!-- Food Retouch -->
         <article class="card">
-          <h3 class="card__title">Food Retouch <p class="card__count badge">22 presets</p>
+          <h3 class="card__title">Food Retouch <p
+              class="card__count badge">22 presets</p>
           </h3>
 
           <p class="card_description">Presets pensados para dar acabamento refinado em imagens de alimentos, sem perder
             naturalidade.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/food-before.webp" alt="" loading="lazy" decoding="async">
-            <img class="ba__img is-after auto" src="img/food-after.webp" alt="" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/food-after.webp" alt="" loading="lazy"
+              decoding="async">
           </div>
         </article>
 
-
+        
 
 
         <!-- Autumn Tones -->
         <article class="card">
-          <h3 class="card__title">Autumn Tones <p class="card__count badge">10 presets</p>
+          <h3 class="card__title">Autumn Tones <p
+              class="card__count badge">10 presets</p>
           </h3>
 
           <p class="card_description">Presets desenvolvidos para trazer uma estética alinhada ao clima do outono.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/autumn-before.webp" alt="" loading="lazy" decoding="async">
-            <img class="ba__img is-after auto" src="img/autumn-after.webp" alt="" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/autumn-after.webp" alt="" loading="lazy"
+              decoding="async">
           </div>
         </article>
 
@@ -258,23 +288,26 @@
 
         <!-- Gym Mood -->
         <article class="card">
-          <h3 class="card__title">Gym Mood <p class="card__count badge">10 presets</p>
+          <h3 class="card__title">Gym Mood <p
+              class="card__count badge">10 presets</p>
           </h3>
 
           <p class="card_description">Presets pensados para criadores fitness, marcas pessoais e conteúdos produzidos em
             academias ou estúdios.</p>
 
-          <div class="ba ba--card ba--auto " data-start="50" aria-label="Comparador de imagem interativo">
+          <div class="ba ba--card ba--auto " data-start="50"
+            aria-label="Comparador de imagem interativo">
             <div class="ba__label-dynamic">Antes</div>
 
             <img class="ba__img is-before" src="img/gym-before.webp" alt="" loading="lazy" decoding="async">
-            <img class="ba__img is-after auto" src="img/gym-after.webp" alt="" loading="lazy" decoding="async">
+            <img class="ba__img is-after auto" src="img/gym-after.webp" alt="" loading="lazy"
+              decoding="async">
           </div>
         </article>
 
 
-
-
+        
+        
 
 
 
@@ -286,7 +319,7 @@
       <!-- CTA da seção -->
       <div class="presets__cta">
         <a href="#s5-oferta" class="hero__btn" aria-label="Quero transformar minhas fotos agora">
-          Quero levar todos os presets
+          Quero transformar minhas fotos agora
         </a>
       </div>
 
@@ -380,9 +413,8 @@
       <h2 class="h2 offer__title">Garanta 80% de desconto</h2>
 
       <p class="offer__subtitle">
-        <span>O preço normal do nosso pack de presets é $49,90.</span> <span style="color: white;"> Mas somente hoje,
-          <span id="data-automatica"></span>,
-          você ganha 80% de desconto, usando o cupom </span><strong class=" cupom text-gradient">PROMO80</strong>
+        <span >O preço normal do nosso pack de presets é $49,90.</span> <span style="color: white;"> Mas somente hoje, <span id="data-automatica"></span>, 
+        você ganha 80% de desconto, usando o cupom </span><strong class=" cupom text-gradient">PROMO80</strong>
       </p>
 
       <p class="offer__receber">
@@ -401,7 +433,7 @@
         <li> <span class="check">✔</span> Garantia incondicional de 7 Dias </li>
 
       </ul>
-
+      
 
       <!-- Preço -->
       <div class="offer__price">
@@ -416,9 +448,8 @@
 
       <!-- CTA principal -->
       <div class="offer__cta">
-        <a href="https://pay.hotmart.com/A101272788U?checkoutMode=10&bid=1754763866403&offDiscount=PROMO80"
-          class="hero__btn" aria-label="Quero transformar minhas fotos agora">
-          Garantir 80% de desconto agora
+        <a href="https://pay.hotmart.com/A101272788U?checkoutMode=10&bid=1754763866403&offDiscount=PROMO80" class="hero__btn" aria-label="Quero transformar minhas fotos agora">
+          Quero garantir o desconto
         </a>
         <p class="offer__microcopy"><em>* Acesso imediato após a confirmação do pagamento</em></p>
       </div>
@@ -435,11 +466,10 @@
 
       <p>
         Durante 7 dias, você tem acesso completo para experimentar e comprovar cada benefício deste produto.
-        Se não enxergar valor real no que recebeu, basta solicitar o reembolso e 100% do seu investimento será devolvido
-        imediatamente.
+Se não enxergar valor real no que recebeu, basta solicitar o reembolso e 100% do seu investimento será devolvido imediatamente.
       </p>
 
-
+      
     </div>
   </section>
 
@@ -515,7 +545,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>Eleven Presets © 2025. <br>
+      <p>Prime Presets © 2025. <br>
         Todos os direitos reservados.</p>
     </div>
   </footer>
@@ -532,7 +562,7 @@
 
 
 
-
+  
 
   <script src="main.js"></script>
 

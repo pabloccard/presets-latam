@@ -447,3 +447,34 @@
           <img class="card__preview-grid" src="img/gym-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
             loading="lazy" decoding="async" />
         </article>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Comparador Antes/Depois (bem menor) -->
+      <div class="how__ba">
+        <div class="ba ba--xs" data-start="50" aria-label="Comparador de imagem interativo">
+
+          <!-- Tarjas "Antes" e "Depois" -->
+          <div class="ba__labels">
+            <span class="ba__label ba__label--before">Antes</span>
+            <span class="ba__label ba__label--after">Depois</span>
+          </div>
+
+          <!-- Imagens -->
+          <img class="ba__img is-before" src="img/how-before.webp" alt="Imagem antes" loading="lazy" decoding="async" />
+          <img class="ba__img is-after" src="img/how-after.webp" alt="Imagem depois" loading="lazy" decoding="async" />
+
+          <!-- Linha e botão -->
+          <div class="ba__handle" aria-hidden="true"></div>
+          <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+        </div>
+      </div>
