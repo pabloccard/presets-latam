@@ -331,97 +331,46 @@ body {
   }
 }
 
-/* =========================================
-   Sessão 2 – O que são & Como funcionam
-   ========================================= */
-/* ====== GRID RESPONSIVA DA SEÇÃO ====== */
-.how__grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-areas:
-    "ba   copy"
-    "ba   cta";
-  gap: var(--gap-lg);
-  align-items: start;
+/* Sessão */
+.how__copy {
+  text-align: center;
 }
 
-.how__copy {
-  grid-area: copy;
-  text-align: left;
-  align-self: start;
-}
-.how__ba {
-  grid-area: ba;
-  display: flex;
-  justify-content: center;
-  align-self: start;
-  max-width: 72%;
-}
-.how__cta {
-  grid-area: cta;
-  margin-top: 6px;
-  align-self: start;
-}
 .how__copy h2 {
   margin-bottom: 3rem;
   font-size: 2.5rem;
 }
 
-/* MOBILE: empilha tudo bonitinho */
-@media (max-width: 900px) {
-  .how__grid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "copy"
-      "ba"
-      "cta";
-  }
-  .how__cta {
-    margin-top: 0;
-  }
-}
-
-/* ====== CARDS ====== */
+/* Cards */
 .how__cards {
   display: grid;
-  gap: 1rem;
-  margin-top: 1.25rem;
+  gap: 1.5rem;
 }
 
-/* 2 colunas no desktop para dar mais ritmo visual */
+/* Layout Desktop */
 @media (min-width: 900px) {
   .how__cards {
-    grid-template-columns: 1fr 1fr;
-  }
-  /* força o 3º card a ocupar a largura toda */
-  .how__card:nth-child(3) {
-    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
 
+/* Card */
 .how__card {
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.875rem;
   align-items: start;
-
-  padding: 1rem 1.125rem 1.125rem 1.125rem;
+  padding: 1rem 1.125rem;
   border-radius: 16px;
-
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-
   border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.18s ease, box-shadow 0.18s ease,
-    border-color 0.18s ease;
-}
-
-.section--dark .how__card {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .how__card:hover {
@@ -430,7 +379,7 @@ body {
   border-color: rgba(0, 0, 0, 0.12);
 }
 
-/* Número em badge */
+/* Badge */
 .how__badge {
   --size: 36px;
   width: var(--size);
@@ -441,182 +390,17 @@ body {
   font-size: 0.95rem;
   color: #fff;
   border-radius: 12px;
-
   background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
   box-shadow: 0 6px 18px rgba(255, 61, 61, 0.25);
 }
 
-/* Texto interno do card */
+/* Texto */
 .how__card p {
   margin: 0;
   line-height: 1.5;
   color: var(--gray-900);
   font-size: 1rem;
   text-align: left;
-}
-
-.section--dark .how__card p {
-  color: #f3f3f3;
-}
-
-/* Ajustes de tipografia do seu trecho existente */
-.section--light .how__text strong {
-  color: var(--gray-900);
-}
-
-/* ======================================
-   Before/After – CSS var + clip-path
-   ====================================== */
-/* .ba{
-  --ba-max-w: 640px;
-  --ba-ratio: 3/4 !important;
-  --pos: 50%;
-
-  position: relative;
-  width: 100%;
-  max-width: var(--ba-max-w);
-  aspect-ratio: var(--ba-ratio);
-  overflow: hidden;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--glow-soft);
-  user-select: none;
-  touch-action: pan-y; 
-  background: var(--gray-200);
-} */
-
-.ba {
-  --ba-max-w: 640px;
-  --ba-ratio: 162 / 257 !important;   /* 810x1285 simplificado */
-  --pos: 50%;
-
-  position: relative;
-  width: 100%;
-  max-width: var(--ba-max-w);
-  height: auto;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--glow-soft);
-  user-select: none;
-  touch-action: pan-y;
-  background: transparent;
-  display: inline-block;
-}
-
-.ba__img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  position: relative;
-}
-
-.ba__img.is-before {
-  z-index: 1;
-  position: relative;
-}
-
-.ba__img.is-after {
-  z-index: 2;
-  position: absolute;
-  inset: 0;
-  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
-  will-change: clip-path;
-}
-
-.ba__handle {
-  position: absolute;
-  inset: 0 auto 0 0;
-  left: var(--pos);
-  width: 2px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
-  z-index: 3;
-  pointer-events: none;
-}
-.ba__knob {
-  position: absolute;
-  left: var(--pos);
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  background: radial-gradient(
-      80% 80% at 50% 30%,
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.7)
-    ),
-    radial-gradient(80% 80% at 50% 70%, rgba(0, 0, 0, 0.06), transparent);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-  cursor: ew-resize;
-  touch-action: none;
-  z-index: 4;
-}
-.ba__knob::before,
-.ba__knob::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 6px;
-  height: 6px;
-  border: solid var(--gray-900);
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: translateY(-50%);
-  opacity: 0.8;
-}
-
-.ba__knob::before {
-  left: 10px;
-  transform: translateY(-50%) rotate(135deg); /* seta esquerda */
-}
-
-.ba__knob::after {
-  right: 10px;
-  transform: translateY(-50%) rotate(-45deg); /* seta direita */
-}
-
-.ba__labels {
-  position: absolute;
-  top: 12px;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 16px;
-  pointer-events: none; /* garante que os elementos abaixo possam ser clicados */
-}
-
-.ba__label {
-  font-size: 13px;
-  font-weight: 700;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 4px 10px;
-  border-radius: 6px;
-  backdrop-filter: blur(4px);
-  text-transform: uppercase;
-  pointer-events: none; /* ADICIONE ISTO AQUI */
-}
-
-.ba__label--before {
-  align-self: flex-start;
-}
-
-.ba__label--after {
-  align-self: flex-start;
-}
-
-.card__preview-grid {
-  width: 100%;
-  border-radius: 12px;
-  /* margin-top: 1rem; */
-  margin-bottom: 1rem;
-  display: block;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
 }
 
 /* ===========================
