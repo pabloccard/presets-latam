@@ -134,7 +134,7 @@
     }
 
     // Verifica o novo valor esperado
-    const newText = percent <= 5 ? "Depois" : "Antes";
+    const newText = percent <= 5 ? "DESPUÉS" : "Antes";
 
     // Se já estiver com esse texto, não precisa trocar
     if (label.textContent === newText) return;
