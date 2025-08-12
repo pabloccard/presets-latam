@@ -1551,9 +1551,6 @@ body {
   padding:4px 10px; border-radius:999px; backdrop-filter: blur(3px);
 }
 
-/* Pause na animação ao passar o mouse (opcional) */
-.xics:hover .xics__img--left,
-.xics:hover .xics__line{ animation-play-state: paused; }
 
 @keyframes xics-sweep{
    0%   { clip-path: inset(0 100% 0 0); }  /* ANTES */
