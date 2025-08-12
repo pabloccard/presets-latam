@@ -486,6 +486,7 @@ body {
 
 .ba {
   --ba-max-w: 640px;
+  --ba-ratio: 162 / 257 !important;   /* 810x1285 simplificado */
   --pos: 50%;
 
   position: relative;
@@ -1505,3 +1506,72 @@ body {
   
 }
 /* ai papai */
+
+
+/* ===== Any-Image-Style (isolado) ===== */
+.xics{
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ratio, 162/257);
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+}
+
+.xics__images{ position:absolute; inset:0; }
+.xics__img{
+  position:absolute; inset:0;
+  background-size: cover;
+  background-position: center;
+  will-change: clip-path;
+}
+.xics__img--right{ z-index:1; }               /* ANTES */
+.xics__img--left{ z-index:2;                   /* DEPOIS (mascara animada) */
+  clip-path: inset(0 100% 0 0);
+  animation: xics-sweep var(--speed,6s) ease-in-out infinite;
+}
+
+/* Linha divisória animando junto */
+.xics__line{
+  position:absolute; top:0; left:0;
+  width: 3px; height: 100%;
+  background: rgba(0,0,0,1);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.2); /* leve contorno, opcional */
+  pointer-events: none;
+  animation: xics-line var(--speed,6s) ease-in-out infinite;
+  z-index: 3;
+}
+
+/* Tag simples (opcional) — você pode trocar para "Antes/Después" via JS se quiser */
+.xics__tag{
+  position:absolute; top:12px; right:12px;
+  z-index:4;
+  background: rgba(0,0,0,.7);
+  color:#fff; font-size:12px; font-weight:700; text-transform:uppercase;
+  padding:4px 10px; border-radius:999px; backdrop-filter: blur(3px);
+}
+
+/* Pause na animação ao passar o mouse (opcional) */
+.xics:hover .xics__img--left,
+.xics:hover .xics__line{ animation-play-state: paused; }
+
+@keyframes xics-sweep{
+   0%   { clip-path: inset(0 100% 0 0); }  /* ANTES */
+  26.7%{ clip-path: inset(0 100% 0 0); }  /* pausa no ANTES (1.6s) */
+  40%  { clip-path: inset(0   0%  0 0); } /* ida (0.8s) */
+  73.3%{ clip-path: inset(0   0%  0 0); } /* pausa no DEPOIS (2.0s) */
+  86.7%{ clip-path: inset(0 100% 0 0); }  /* volta (0.8s) */
+  100% { clip-path: inset(0 100% 0 0); }  /* pausa final (0.8s) */
+}
+/* SUBSTITUA este bloco */
+@keyframes xics-line{
+0%   { left: 0%;   transform: translateX(0); }
+  26.7%{ left: 0%;   transform: translateX(0); }       /* pausa no ANTES */
+  40%  { left: 100%; transform: translateX(-100%); }   /* ida */
+  73.3%{ left: 100%; transform: translateX(-100%); }   /* pausa no DEPOIS */
+  86.7%{ left: 0%;   transform: translateX(0); }       /* volta */
+  100% { left: 0%;   transform: translateX(0); }       /* pausa final */
+}
+
+
+
