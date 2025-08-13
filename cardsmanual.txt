@@ -1,480 +1,143 @@
-<div class="cards">
-        <!-- 1 -->
+<!-- Skin Retouch -->
         <article class="card">
-          <h3 class="card__title">Beach Day</h3>
-          <p class="card__count badge">10 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets pensada para quem transforma dias comuns na praia em imagens memoráveis.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Skin Retouch <p class="card__count badge">24 presets</p>
+          </h3>
+          <p class="card_description">Una colección de presets creada para resaltar la naturalidad de la piel, ya sea en
+            tonos claros o oscuros.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/skin-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/skin-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/beach-before.webp" alt="Urbano – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/beach-after.webp" alt="Urbano – depois" loading="lazy"
-              decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/beach-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-
-        <!-- 2 -->
+        <!-- Dark Moody -->
         <article class="card">
-          <h3 class="card__title">Golden Sunset</h3>
-          <p class="card__count badge">10 presets exclusivos</p>
-          <p class="card_description">Presets criados para capturar o calor da luz dourada e a beleza silenciosa do fim do dia.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Dark Moody <p class="card__count badge">14 presets</p>
+          </h3>
+          <p class="card_description">Presets desarrollados para quienes prefieren sombras, peso visual y composición
+            discreta.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/dark-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/dark-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/sunset-before.webp" alt="sunset – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/sunset-after.webp" alt="sunset – depois" loading="lazy"
-              decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/sunset-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-        <!-- 3 -->
+        <!-- Beach Day -->
         <article class="card">
-          <h3 class="card__title">Dark Moody</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Presets desenvolvidos para quem prefere sombra, peso visual e composição discreta.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Beach Day <p class="card__count badge">10 presets</p>
+          </h3>
+          <p class="card_description">Una colección de presets pensada para quienes convierten días comunes en la playa
+            en imágenes memorables.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/beach-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/beach-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/dark-before.webp" alt="dark – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/dark-after.webp" alt="dark – depois" loading="lazy"
-              decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/dark-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-        <!-- 4 -->
+        <!-- Wedding Day -->
         <article class="card">
-          <h3 class="card__title">Shades of Silence</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets preto e branco feita para cenas que não precisam de cor para dizer o que sentem.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Wedding Day <p class="card__count badge">14 presets</p>
+          </h3>
+          <p class="card_description">Una colección de presets pensada para fotos de boda, ideal para ceremonias, making
+            of y retratos con atmósfera natural.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/wedding-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/wedding-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/shades-before.webp" alt="shades – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/shades-after.webp" alt="shades – depois" loading="lazy"
-              decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/shades-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-        <!-- 5 -->
+        <!-- Preto e branco -->
         <article class="card">
-          <h3 class="card__title">Coffee Mood</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets ideal para momentos simples, pausados e imagens que pedem menos ruído e mais intenção.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Black & White <p class="card__count badge">12 presets</p>
+          </h3>
+          <p class="card_description">Una colección de presets en blanco y negro diseñada para resaltar contrastes y
+            texturas, ideal para retratos, fotografía urbana y escenas llenas de carácter.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/black-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/black-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/coffee-before.webp" alt="coffee – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/coffee-after.webp" alt="coffee – depois" loading="lazy" decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/coffee-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-        <!-- 6 -->
+        <!-- Golden Sunset -->
         <article class="card">
-          <h3 class="card__title">Food Retouch</h3>
-          <p class="card__count badge">22 presets exclusivos</p>
-          <p class="card_description">Presets pensados para dar acabamento refinado em imagens de alimentos, sem perder naturalidade.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Golden Sunset <p class="card__count badge">10 presets</p>
+          </h3>
+          <p class="card_description">Presets creados para capturar el calor de la luz dorada y la belleza silenciosa
+            del atardecer.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/golden-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/golden-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/food-before.webp" alt="food – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/food-after.webp" alt="food – depois" loading="lazy" decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/food-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-        <!-- 7 -->
+        <!-- Food Retouch -->
         <article class="card">
-          <h3 class="card__title">Wedding Day</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets voltada para fotos de casamento, ideal para fotos de cerimônia, making of e retratos com atmosfera natural.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Food Retouch <p class="card__count badge">22 presets</p>
+          </h3>
+          <p class="card_description">Presets pensados para dar un acabado refinado a imágenes de alimentos, sin perder
+            naturalidad.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/food-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/food-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/wedding-before.webp" alt="wedding – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/wedding-after.webp" alt="wedding – depois" loading="lazy"
-              decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/wedding-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-
-        <!-- 8 -->
+        <!-- Autumn Tones -->
         <article class="card">
-          <h3 class="card__title">Autumn Tones</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Presets desenvolvidos para trazer uma estética alinhada ao clima do outono. </p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Autumn Tones <p class="card__count badge">14 presets</p>
+          </h3>
+          <p class="card_description">Presets diseñados para traer una estética alineada al clima otoñal.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/autumn-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/autumn-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/autumn-before.webp" alt="autumn – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/autumn-after.webp" alt="autumn – depois" loading="lazy" decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/autumn-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
 
-        <!-- 9 -->
+        <!-- Gym Mood -->
         <article class="card">
-          <h3 class="card__title">Urban Fade</h3>
-          <p class="card__count badge">10 presets exclusivos</p>
-          <p class="card_description">Presets com tons escuros, contraste acentuado e atmosfera urbana.</p>
-
-          <div class="ba ba--card" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-              <span class="ba__label ba__label--before">Antes</span>
-              <span class="ba__label ba__label--after">Depois</span>
+          <h3 class="card__title">Gym Mood <p class="card__count badge">18 presets</p>
+          </h3>
+          <p class="card_description">Presets pensados para creadores fitness, marcas personales y contenido producido
+            en gimnasios o estudios.</p>
+          <div class="xics" style="--ratio: 162/257; --speed: 6s;" aria-label="Comparador de imagen interactivo">
+            <div class="xics__images">
+              <div class="xics__img xics__img--right" data-src="img/gym-before.webp" aria-label="antes"></div>
+              <div class="xics__img xics__img--left" data-src="img/gym-after.webp" aria-label="después"></div>
             </div>
-
-            <img class="ba__img is-before" src="img/urban-before.webp" alt="urban – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after" src="img/urban-after.webp" alt="urban – depois" loading="lazy"
-              decoding="async">
-
-            <div class="ba__handle" aria-hidden="true"></div>
-            <button class="ba__knob" aria-label="Arrastar para comparar"></button>
+            <span class="xics__line" aria-hidden="true"></span>
+            <span class="xics__tag">Antes</span>
           </div>
-
-          <img class="card__preview-grid" src="img/urban-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
         </article>
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <!-- 1 -->
-        <article class="card">
-          <h3 class="card__title">Beach Day</h3>
-          <p class="card__count badge">10 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets pensada para quem transforma dias comuns na praia em
-            imagens memoráveis.</p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-            <div class="ba__labels">
-            </div>
-
-            <img class="ba__img is-before" src="img/beach-before.webp" alt="Urbano – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/beach-after.webp" alt="Urbano – depois" loading="lazy"
-              decoding="async">
-          </div>
-
-          <img class="card__preview-grid" src="img/beach-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-
-        <!-- 2 -->
-        <article class="card">
-          <h3 class="card__title">Golden Sunset</h3>
-          <p class="card__count badge">10 presets exclusivos</p>
-          <p class="card_description">Presets criados para capturar o calor da luz dourada e a beleza silenciosa do fim
-            do dia.</p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-
-            <img class="ba__img is-before" src="img/sunset-before.webp" alt="sunset – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/sunset-after.webp" alt="sunset – depois" loading="lazy"
-              decoding="async">
-          </div>
-
-          <img class="card__preview-grid" src="img/sunset-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-        <!-- 3 -->
-        <article class="card">
-          <h3 class="card__title">Dark Moody</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Presets desenvolvidos para quem prefere sombra, peso visual e composição discreta.
-          </p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-            <img class="ba__img is-before" src="img/dark-before.webp" alt="dark – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/dark-after.webp" alt="dark – depois" loading="lazy"
-              decoding="async">
-
-          </div>
-
-          <img class="card__preview-grid" src="img/dark-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-        <!-- 4 -->
-        <article class="card">
-          <h3 class="card__title">Shades of Silence</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets preto e branco feita para cenas que não precisam de cor
-            para dizer o que sentem.</p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-
-            <img class="ba__img is-before" src="img/shades-before.webp" alt="shades – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/shades-after.webp" alt="shades – depois" loading="lazy"
-              decoding="async">
-
-          </div>
-
-          <img class="card__preview-grid" src="img/shades-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-        <!-- 5 -->
-        <article class="card">
-          <h3 class="card__title">Coffee Mood</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets ideal para momentos simples, pausados e imagens que pedem
-            menos ruído e mais intenção.</p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-            <img class="ba__img is-before" src="img/coffee-before.webp" alt="coffee – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/coffee-after.webp" alt="coffee – depois" loading="lazy"
-              decoding="async">
-
-
-          </div>
-
-          <img class="card__preview-grid" src="img/coffee-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-        <!-- 6 -->
-        <article class="card">
-          <h3 class="card__title">Food Retouch</h3>
-          <p class="card__count badge">22 presets exclusivos</p>
-          <p class="card_description">Presets pensados para dar acabamento refinado em imagens de alimentos, sem perder
-            naturalidade.</p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-
-            <img class="ba__img is-before" src="img/food-before.webp" alt="food – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/food-after.webp" alt="food – depois" loading="lazy"
-              decoding="async">
-
-
-          </div>
-
-          <img class="card__preview-grid" src="img/food-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-        <!-- 7 -->
-        <article class="card">
-          <h3 class="card__title">Wedding Day</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Uma coleção de presets voltada para fotos de casamento, ideal para fotos de
-            cerimônia, making of e retratos com atmosfera natural.</p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-            <img class="ba__img is-before" src="img/wedding-before.webp" alt="wedding – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/wedding-after.webp" alt="wedding – depois" loading="lazy"
-              decoding="async">
-
-
-          </div>
-
-          <img class="card__preview-grid" src="img/wedding-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-
-        <!-- 8 -->
-        <article class="card">
-          <h3 class="card__title">Autumn Tones</h3>
-          <p class="card__count badge">14 presets exclusivos</p>
-          <p class="card_description">Presets desenvolvidos para trazer uma estética alinhada ao clima do outono. </p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-
-            <img class="ba__img is-before" src="img/autumn-before.webp" alt="autumn – antes" loading="lazy"
-              decoding="async">
-            <img class="ba__img is-after auto" src="img/autumn-after.webp" alt="autumn – depois" loading="lazy"
-              decoding="async">
-
-
-          </div>
-
-          <img class="card__preview-grid" src="img/autumn-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-        <!-- 9 -->
-        <article class="card">
-          <h3 class="card__title">Gym Mood </h3>
-          
-          <p class="card_description">Presets pensados para criadores fitness, marcas pessoais e conteúdos produzidos em
-            academias ou estúdios.</p>
-
-          <div class="ba ba--card ba--auto" data-start="50" aria-label="Comparador de imagem interativo">
-
-
-            <img class="ba__img is-before" src="img/gym-before.webp" alt="gym – antes" loading="lazy" decoding="async">
-            <img class="ba__img is-after auto" src="img/gym-after.webp" alt="gym – depois" loading="lazy"
-              decoding="async">
-
-
-          </div>
-
-          <img class="card__preview-grid" src="img/gym-preview.webp" alt="Exemplos de fotos com o efeito aplicado"
-            loading="lazy" decoding="async" />
-        </article>
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Comparador Antes/Depois (bem menor) -->
-      <div class="how__ba">
-        <div class="ba ba--xs" data-start="50" aria-label="Comparador de imagem interativo">
-
-          <!-- Tarjas "Antes" e "Depois" -->
-          <div class="ba__labels">
-            <span class="ba__label ba__label--before">Antes</span>
-            <span class="ba__label ba__label--after">Depois</span>
-          </div>
-
-          <!-- Imagens -->
-          <img class="ba__img is-before" src="img/how-before.webp" alt="Imagem antes" loading="lazy" decoding="async" />
-          <img class="ba__img is-after" src="img/how-after.webp" alt="Imagem depois" loading="lazy" decoding="async" />
-
-          <!-- Linha e botão -->
-          <div class="ba__handle" aria-hidden="true"></div>
-          <button class="ba__knob" aria-label="Arrastar para comparar"></button>
-        </div>
       </div>
