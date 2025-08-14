@@ -744,7 +744,7 @@ body {
    Seção Oferta Final
    =========================== */
 .offer {
-  background: var(--bg-dark);
+  background: var(--bg-light);
   color: var(--text-strong);
   text-align: center;
   padding: var(--pad-section) 20px;
@@ -800,7 +800,6 @@ body {
   border: 1px dashed rgba(255, 255, 255, 0.24);
   padding: 0.2rem 0.55rem;
   border-radius: 10px;
-  /* background: rgba(255, 255, 255, 0.05); */
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -816,7 +815,6 @@ body {
   margin: 3rem 0 0;
 }
 .old-price {
-  /* text-decoration: line-through; */
   color: var(--gray-200);
   font-size: 1.25rem;
   margin: 0;
@@ -827,13 +825,11 @@ body {
 }
 .old-price s {
   text-decoration: line-through;
-  text-decoration-thickness: 1px; /* ou 0.5px, 2px etc */
+  text-decoration-thickness: 1px;
 }
 
 .new-price {
-  /* margin: 0.5rem 0 0; */
   color: var(--text-muted);
-  /* line-height: 3rem; */
 }
 .new-price strong {
   font-size: 3.5rem;
@@ -877,9 +873,27 @@ body {
   gap: 8px;
 }
 
+
 .offer__cta a {
   margin: auto;
   font-weight: bold;
+  animation: pulse 1.5s infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 110, 0.6); /* cor inicial (rosa do gradiente) */
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(255, 0, 110, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 110, 0);
+  }
 }
 
 /* Ajuste para containers de CTA */
@@ -897,12 +911,63 @@ body {
   margin: 2rem auto;
 }
 
-/* Opcional: ajuste para evitar overflow em telas pequenas */
+/* Caixa da oferta (retângulo) */
+.offer__box {
+  background: var(--bg-dark);
+  border-radius: 2rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+/* Faixa 80% OFF */
+.offer__ribbon {
+  position: absolute;
+  top: 18px;
+  right: -54px;               /* desloca para fora para criar o ângulo */
+  display: inline-block;
+  padding: 12px 70px;
+  font-weight: 800;
+  font-size: .9rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  transform: rotate(45deg);
+  transform-origin: center;
+  z-index: 3;
+  background: none;           /* zera qualquer background herdado */
+  /* usa seu gradiente primário se existir; senão usa o fallback abaixo */
+  background-image: var(--gradient-primary, linear-gradient(90deg, #ff006e 0%, #ff5f00 100%)) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,.35);
+}
+
+.offer__ribbon span {
+  display: block;
+  text-align: center;
+}
+
+/* Opcional: melhor encaixe visual da faixa */
+.offer__ribbon::after{
+  content:"";
+  position:absolute;
+  top: 100%;
+  right: 0;
+  border-top: 8px solid rgba(0,0,0,.22);
+  border-left: 8px solid transparent;
+}
+
+/* Responsivo: aproxima a faixa em telas menores */
 @media (max-width: 500px) {
   .btn {
     max-width: 100%;
     font-size: 15px;
     padding: 14px 10px;
+  }
+  .offer__ribbon{
+    right: -60px;
+    padding: 10px 62px;
   }
 }
 
@@ -910,7 +975,9 @@ body {
   font-size: 12px;
   color: var(--text-muted);
   margin: 0;
+  margin-top: 0.5rem;
 }
+
 
 /* ===========================
    Seção FAQ
