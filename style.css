@@ -313,6 +313,11 @@ body {
     width: 100%;
   }
 
+  .hero__btn {
+    font-size: 1rem;
+    width: 100%;
+  }
+
   /* evita “vazar” o bg quadriculado no mobile */
   .hero__bg{ display: none; }
 
