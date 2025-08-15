@@ -377,14 +377,18 @@ body {
 /* Tablets */
 @media (min-width: 641px) and (max-width: 1024px){
   :root{
-    --overlap: 260px;
-    --fade-h: 340px;
+    --overlap: 700px;
+    --fade-h: 1300px;
   }
 
   .hero{
     min-height:auto;
     background:#000;
     position:relative;
+  }
+
+  .hero__btn {
+    margin: auto;
   }
 
   /* evita bg decorativo sob o degradê */
@@ -921,9 +925,10 @@ body {
 }
 
 .aviso {
-  color: var(--gray-400);
+  /* color: var(--gray-400); */
   margin: 0;
   margin-bottom: 1rem;
+  
 }
 
 .offer__price {
@@ -971,6 +976,7 @@ body {
 
 .tempo {
   color: #fff;
+  /* background-color: rgb(122, 0, 0); */
 }
 
 .pagamento_unico {
