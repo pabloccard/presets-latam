@@ -60,21 +60,36 @@
    *  FAQ
    * ============================ */
   document.querySelectorAll(".faq__question").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const item = btn.parentElement;
-      const isOpen = item.classList.contains("open");
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector(".faq__answer");
+    const isOpen = item.classList.contains("open");
 
-      document.querySelectorAll(".faq__item").forEach((i) => {
-        i.classList.remove("open");
-        i.querySelector(".faq__question").setAttribute("aria-expanded", "false");
-      });
-
-      if (!isOpen) {
-        item.classList.add("open");
-        btn.setAttribute("aria-expanded", "true");
-      }
+    // fecha todos e zera altura
+    document.querySelectorAll(".faq__item").forEach((i) => {
+      i.classList.remove("open");
+      i.querySelector(".faq__question").setAttribute("aria-expanded", "false");
+      const a = i.querySelector(".faq__answer");
+      if (a) a.style.maxHeight = 0;
     });
+
+    if (!isOpen) {
+      item.classList.add("open");
+      btn.setAttribute("aria-expanded", "true");
+      // calcula a altura real do conteúdo
+      requestAnimationFrame(() => {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      });
+    }
   });
+});
+
+// re-calcula se a janela mudar (evita cortes)
+window.addEventListener("resize", () => {
+  document.querySelectorAll(".faq__item.open .faq__answer").forEach((ans) => {
+    ans.style.maxHeight = ans.scrollHeight + "px";
+  });
+});
 
   /* ============================
    *  COMPARADOR .ba (se existir)
@@ -247,4 +262,85 @@
     }
     requestAnimationFrame(loop);
   })();
+
+  /* ============ LISTA DE BUNDLES (render no FAQ) ============ */
+document.addEventListener("DOMContentLoaded", () => {
+  const data = [
+    { n: "Wedding Day", c: 14 },
+    { n: "Beach Day", c: 10 },
+    { n: "Dark Moody", c: 14 },
+    { n: "Skin Retouch", c: 24 },
+    { n: "Golden Sunset", c: 10 },
+    { n: "Black & White", c: 12 },
+    { n: "Food Retouch", c: 22 },
+    { n: "Vintage", c: 18 },
+    { n: "Autumn Tones", c: 14 },
+    { n: "Cinematic Moody", c: 20 },
+    { n: "Cars", c: 20 },
+    { n: "Summer", c: 14 },
+    { n: "Bright & Cream", c: 10 },
+    { n: "Minimal White", c: 12 },
+    { n: "Moody Wedding", c: 12 }
+  ];
+
+  const ul = document.getElementById("bundles-list");
+  if (!ul) return;
+
+  ul.innerHTML = "";
+  data.forEach(({ n, c }) => {
+    const li = document.createElement("li");
+    li.className = "bundle";
+    li.innerHTML = `<span class="bundle__name">${n}</span>
+                    <span class="bundle__count">${c} presets</span>`;
+    ul.appendChild(li);
+  });
+});
+
+const PX_PER_SEC = 50; // ajuste fino da “velocidade” (px por segundo)
+
+  function setMarqueeDurations() {
+    document.querySelectorAll('.marquee__row .marquee__track').forEach(track => {
+      // distância por ciclo = 50% da trilha
+      const distancePx = track.scrollWidth * 0.5;
+      const durSec = distancePx / PX_PER_SEC;
+      track.style.setProperty('--dur', `${durSec}s`);
+    });
+  }
+
+  function imagesReady(container) {
+    const imgs = container.querySelectorAll('img');
+    let pending = imgs.length;
+    if (!pending) return Promise.resolve();
+    return new Promise(resolve => {
+      imgs.forEach(img => {
+        if (img.complete) {
+          if (--pending === 0) resolve();
+        } else {
+          img.addEventListener('load', () => { if (--pending === 0) resolve(); });
+          img.addEventListener('error', () => { if (--pending === 0) resolve(); });
+        }
+      });
+    });
+  }
+
+  function initMarqueeSync() {
+    const root = document;
+    imagesReady(root).then(() => {
+      setMarqueeDurations();
+    });
+
+    // recalcula ao redimensionar
+    window.addEventListener('resize', () => {
+      setMarqueeDurations();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMarqueeSync);
+  } else {
+    initMarqueeSync();
+  }
+
+
+
 })();

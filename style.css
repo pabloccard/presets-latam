@@ -310,7 +310,8 @@ body {
 
   .hero .hero__btn {
     margin: auto;
-    width: 100%;
+    font-size: 1.5rem;
+    /* width: 100%; */
   }
 
   .hero__btn {
@@ -539,7 +540,7 @@ body {
 }
 .presets__sub {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0.5rem auto 3rem;
   max-width: 500px;
 }
@@ -587,12 +588,12 @@ body {
 
   text-align: center;
   background: transparent; /* mesma cor da sessão */
-  border-top: 1px solid rgba(41, 41, 41, 0.322); /* só topo */
+  /* border-top: 1px solid rgba(41, 41, 41, 0.322); */
   border-left: none;
   border-right: none;
   border-bottom: none;
   border-radius: 0; /* remove arredondamento */
-  padding: 3rem 0 3rem; /* remove padding */
+  padding: 0 0 3rem; /* remove padding */
   box-shadow: none; /* remove sombra */
 }
 
@@ -694,6 +695,37 @@ body {
   margin: 0 auto; /* centraliza */
   border-radius: 8px;
 }
+
+
+/* FAQ – lista simples de bundles (mesma linguagem visual) */
+.bundle-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.bundle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;                     /* seção FAQ é clara */
+  color: var(--gray-900);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+.bundle__name { font-size: .98rem; }
+.bundle__count {
+  font-size: .8rem;
+  color: var(--gray-700);
+  background: var(--gray-100);
+  border: 1px solid var(--border-light);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
 
 /* ===========================
    Seção Bônus Unificado
@@ -1026,7 +1058,7 @@ body {
 }
 
 .offer_img {
-  max-width: 80%;
+  max-width: 100%;
   opacity: 0.6;
   display: block;
   margin: 2rem auto;
@@ -1175,7 +1207,7 @@ body {
   margin: 16px 0;
 }
 .faq__item.open .faq__answer {
-  max-height: 500px;
+  /* max-height: 500px; */
   padding-bottom: 16px;
 }
 
@@ -1547,3 +1579,503 @@ body {
 
 
 
+.hero__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Carrossel */
+.hero__carousel {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+  transition: transform .6s ease;
+}
+
+.hero__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Mostra o carrossel só no mobile, se quiser */
+@media (min-width: 1024px) {
+  .hero__image-wrapper { display: none; }
+}
+
+
+/* ===== Container ===== */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* ===== Trilho e slides ===== */
+.carousel__track {
+  display: flex;
+  transition: transform .5s ease;
+  will-change: transform;
+  cursor: grab;          /* feedback no desktop */
+  touch-action: pan-y;   /* permite rolagem vertical da página */
+}
+.carousel--dragging .carousel__track { 
+  transition: none; 
+  cursor: grabbing;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;   /* evita drag nativo da imagem */
+}
+
+/* ===== Botões (opcionais) ===== */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.carousel__btn:focus { outline: 2px solid rgba(255,255,255,.8); outline-offset: 2px; }
+.carousel__btn--prev { left: 8px; }
+.carousel__btn--next { right: 8px; }
+
+/* ===== Dots (somente dentro de .carousel__dots) ===== */
+.carousel__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 3; /* acima da imagem e das thumbs */
+}
+.carousel__dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,.45);
+  cursor: pointer;
+  transition: width .2s ease, background .2s ease;
+}
+.carousel__dots button[aria-current="true"] {
+  background: #fff;
+  width: 18px;
+  border-radius: 6px; /* vira 'pílula' quando ativo */
+}
+
+/* ===== Thumbs (somente dentro de .carousel__thumbs) ===== */
+.carousel__thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  overflow: auto;
+  padding-bottom: 2px;
+}
+.carousel__thumbs button {
+  all: unset;              /* reseta estilos nativos de button */
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  outline-offset: 2px;
+  flex: 0 0 auto;
+  display: block;          /* garante caixa sólida */
+}
+.carousel__thumbs button img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  opacity: .8;
+  transition: opacity .2s, transform .2s, box-shadow .2s, filter .2s;
+  filter: brightness(0.6); /* deixa mais escuro */
+}
+
+/* Thumb ativa */
+.carousel__thumbs button[aria-current="true"] img {
+  opacity: 1;
+  filter: brightness(1);  /* volta ao normal */
+  transform: scale(1.03);
+  box-shadow: 0 0 0 2px #000 inset;
+}
+
+/* ===== Responsivo opcional ===== */
+/* Em telas pequenas, se quiser esconder botões e usar só arrasto + dots:
+@media (max-width: 560px){
+  .carousel__btn{ display:none; }
+}
+*/
+/* base dos itens */
+.feat{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;color:#fff}
+.feat__icon{width:28px;height:28px;display:grid;place-items:center;border-radius:999px;flex:0 0 28px}
+.feat__icon svg{width:16px;height:16px;color:#fff}
+.feat__text{font-weight:600;font-size:14px;letter-spacing:.2px;line-height:1.2}
+
+
+/* ====== Ticker base ====== */
+/* ===== Ticker ancorado no HERO (como antes) ===== */
+.ticker{
+  --h:42px;                 /* altura da faixa */
+  --fs:14px;
+  --gap:18px;
+
+  color:#fff;
+  border-radius:999px;
+  background:rgba(17,17,17,.85);
+  border:1px solid rgba(255,255,255,.14);
+  backdrop-filter:blur(10px);
+  overflow:hidden;
+  z-index:5;
+}
+
+.hero__inner{ position:relative; }             /* pai relativo p/ ancorar */
+.ticker--hero{
+  position:absolute;
+  left:50%;
+  bottom:8px;
+  transform:translateX(-50%);
+  max-width:min(680px, 94%);
+  width:100%;
+}
+
+/* dá espaço pro título não ficar por baixo da faixa (apenas mobile) */
+@media (max-width:640px){
+  .hero__content{ padding-bottom: calc(var(--h) + 20px); }
+}
+
+/* ===== estrutura do ticker ===== */
+.ticker__viewport{
+  height:var(--h);
+  display:flex; align-items:center;
+  overflow:hidden; border-radius:inherit;
+}
+
+.ticker__track{
+  display:flex; align-items:center;
+  gap:var(--gap);
+  height:100%;
+  padding:0 12px;
+  white-space:nowrap;
+  width:max-content;                 /* largura exata do conteúdo (A|A) */
+  will-change:transform;
+  animation: marquee var(--dur,25s) linear infinite;
+}
+
+/* item */
+.ticker__item{
+  display:inline-flex; align-items:center; gap:8px;
+   font-size:var(--fs); line-height:1; letter-spacing:.2px;
+}
+
+/* separador (escopado) */
+.ticker .dot{
+  width:8px; height:8px; border-radius:999px; flex:0 0 8px;
+  background:linear-gradient(45deg,#8a2be2,#ff3d3d);
+  box-shadow:0 0 0 2px rgba(255,255,255,.06);
+}
+
+/* evita scroll horizontal no hero em mobile */
+.hero, .hero__inner, .hero__content { overflow-x: clip; }
+
+/* pausa no hover (desktop) */
+@media (hover:hover){ .ticker:hover .ticker__track{ animation-play-state: paused; } }
+@media (prefers-reduced-motion: reduce){ .ticker__track{ animation:none !important; } }
+
+/* loop perfeito: move metade do trilho duplicado */
+@keyframes marquee{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* Altura do ticker usada em todo lugar */
+:root{
+  --ticker-h: 42px;         /* mesmo valor que você usa em .ticker (--h) */
+  --ticker-gap: 68px;       /* respiro entre headline e ticker */
+}
+
+
+/* garante o contexto p/ posicionar o ticker */
+.hero__inner{ position: relative; }
+
+/* o seu ticker pode continuar como está; só garantimos que use a mesma var */
+.ticker{ --h: var(--ticker-h); }
+
+/* >>> AQUI está o truque: dá espaço abaixo do H1 para não ficar por baixo do ticker */
+@media (max-width: 640px){
+  .hero__headline{
+    display: block;
+    margin-bottom: calc(var(--ticker-h) + var(--ticker-gap)) !important;
+  }
+}
+
+/* se preferir que SEMPRE respeite (desktop também), remova o @media acima */
+/* ===== HERO DESKTOP (desktop-only) ===== */
+#hero-desktop { display: none; }
+@media (min-width:1025px){
+  #hero-desktop { display:block; }
+  #hero-mobile  { display:none !important; }
+}
+
+/* Wrapper */
+.hero--desktop{
+  position: relative;
+  min-height: 92vh;         /* espaço inferior reduzido */
+  background: #000;
+  overflow: hidden;
+}
+
+/* Faixa de imagens — grandes, sem gap/borda */
+.hero--desktop .hero-strip{
+  position: relative;
+  height: 56vh;             /* altura das imagens */
+}
+.hero--desktop .strip__mask{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.hero--desktop .strip__track{
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: 0;                   /* sem espaçamento */
+  padding: 0;               /* sem padding */
+  will-change: transform;
+  z-index: 1;               /* trilhas abaixo da sombra e do texto */
+}
+.hero--desktop .strip__track--a{ animation: strip-a 60s linear infinite; }
+.hero--desktop .strip__track--b{ animation: strip-b 60s linear infinite; }
+@keyframes strip-a { from{transform:translateX(0%)}   to{transform:translateX(-100%)} }
+@keyframes strip-b { from{transform:translateX(100%)} to{transform:translateX(0%)} }
+
+.hero--desktop .strip__track img{
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;         /* sem bordas */
+}
+
+/* Sombra por cima das imagens */
+.hero--desktop .strip__fade{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 26vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 55%, #000 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Texto centralizado, meio sobre imagens / meio na área preta */
+.hero--desktop .hero__overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 3;               /* acima das imagens e da sombra */
+}
+.hero--desktop .hero__inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero--desktop .hero__content{
+  position: absolute;
+  left: 50%;
+  top: 56vh;                /* mesmo valor da faixa de imagens */
+  transform: translate(-50%, -62%); /* puxa um pouco para cima */
+  text-align: center;
+  width: min(100%, 980px);
+  padding: 0 24px;
+}
+
+.hero--desktop .hero__headline{ color: var(--gray-0, #fff); margin-bottom: 12px; }
+.hero--desktop .ticker--hero{ margin-top: 10px; }
+
+
+/* ===== Bundle Stats (versão fundo branco) ===== */
+.stats {
+  background: #fff;            /* fundo branco */
+  color: var(--gray-700, #4b4b4b);
+  text-align: center;
+  padding: clamp(48px, 8vw, 120px) 0;
+  border-top: 1px solid var(--border-light, #ececec);
+  border-bottom: 1px solid var(--border-light, #ececec);
+}
+.stats .container { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+.stats__kicker {
+  font-size: .95rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gray-500, #8a8a8a);
+  margin: 0 0 18px;
+}
+
+.stats__item { margin: clamp(28px, 6vw, 64px) 0; }
+
+.stats__big {
+  line-height: .95;
+  margin-bottom: 10px;
+  /* glow bem leve e neutro para branco */
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.08));
+}
+.stats__big .text-gradient {
+  display: inline-block;
+  font-weight: 900;
+  letter-spacing: -.02em;
+  font-size: clamp(56px, 12vw, 140px);
+  /* gradiente neutro (preto → cinza escuro), sem cor do exemplo */
+  background: linear-gradient(180deg, #111 0%, #222 60%, #000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stats__sub {
+  margin: 0;
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: var(--gray-600, #6e6e6e);
+  opacity: .95;
+}
+
+/* CTA discreta para fundo branco */
+.stats__cta {
+  display: inline-block;
+  margin-top: clamp(8px, 2vw, 16px);
+  font-weight: 700;
+  color: var(--gray-900, #111);
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-light, #e8e8e8);
+  background: #fff;
+  transition: background .15s ease, transform .15s ease;
+}
+.stats__cta:hover { background: #f7f7f7; transform: translateY(-1px); }
+
+/* espaçamento mais justo em telas muito altas */
+@media (min-height: 900px) {
+  .stats { padding-top: 96px; padding-bottom: 120px; }
+}
+
+/* Título e lead da seção stats (fundo branco) */
+.stats__title{
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--gray-900, #111);
+  margin: 0 0 6px;
+}
+.stats__lead{
+  margin: 0 auto 18px;
+  max-width: 720px;
+  color: var(--gray-600, #6e6e6e);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+
+/* ===== Seção "Ainda tem muito mais" (fundo branco) ===== */
+.more-bonus{
+  background:#fff;
+  color:#111;
+  padding: clamp(0, 8vw, 120px) 0 0; /* topo com respiro; base sem para colar nas faixas */
+  /* border-top: 1px solid var(--border-light, #ececec); */
+}
+.more-bonus .container{
+  max-width: 920px;
+  margin: 0 auto 22px;
+  padding: 0 20px;
+  text-align: center;
+}
+.more-bonus__title{
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  margin: 0 0 2rem;
+  letter-spacing: -0.01em;
+}
+.more-bonus__lead{
+  margin: 0 auto 2rem;
+  max-width: 720px;
+  color: var(--gray-700, #5f5f5f);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* ===== Marquee duplo contínuo ===== */
+/* ===== Marquee: cada imagem ocupa a largura total da tela ===== */
+.marquee{
+  background: #fff;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.marquee__row{
+  /* altura passa a ser automática, definida pela imagem mais alta */
+  height: auto;
+  margin: 0;           /* sem espaço entre as duas faixas */
+}
+
+.marquee__row + .marquee__row{
+  margin-top: 0;       /* zero gap entre as faixas */
+}
+
+.marquee__track{
+  display: flex;
+  align-items: flex-start;  /* não esticar imagens na altura */
+  gap: 0;                   /* sem espaço entre imagens */
+  width: max-content;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: var(--dur, 50s); /* agora controlada via JS */
+}
+
+.marquee__row[data-dir="left"]  .marquee__track{ animation-name: marquee-left; }
+.marquee__row[data-dir="right"] .marquee__track{ animation-name: marquee-right; }
+
+
+:root{ --gap: 2px; }
+
+/* espaço entre as imagens */
+.marquee__track{ gap: var(--gap); }
+
+/* CADA IMG = 100vw de largura; altura natural, sem crop */
+.marquee__track img{
+  flex: 0 0 calc(50vw - var(--gap));
+  width: calc(50vw - var(--gap));
+  height: auto;     /* mantém proporção original (sem cortar) */
+  display: block;
+  margin: 0;
+  border: 0;
+  object-fit: unset;   /* garante que não force 'cover' */
+  object-position: center;
+}
+
+/* animações para o loop contínuo */
+@keyframes marquee-left{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marquee-right{
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* evitar qualquer scroll horizontal inesperado */
+html, body { overflow-x: hidden; }
