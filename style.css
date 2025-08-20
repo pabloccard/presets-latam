@@ -1719,6 +1719,19 @@ body {
   box-shadow: 0 0 0 2px #000 inset;
 }
 
+/* Hero: impedir gesto horizontal (mantém scroll vertical normal) */
+.hero__carousel { touch-action: pan-y; }
+
+/* Imagens não “arrastáveis” */
+.hero__slide { user-select: none; pointer-events: none; }
+
+/* (para os cards você já tem) */
+.carousel__track .carousel__slide {
+  user-select: none;
+  pointer-events: none;
+}
+
+
 /* ===== Responsivo opcional ===== */
 /* Em telas pequenas, se quiser esconder botões e usar só arrasto + dots:
 @media (max-width: 560px){

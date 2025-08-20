@@ -341,6 +341,8 @@ const PX_PER_SEC = 75; // ajuste fino da “velocidade” (px por segundo)
     initMarqueeSync();
   }
 
+  
+
 
 
 })();
