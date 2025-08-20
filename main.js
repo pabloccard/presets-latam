@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const PX_PER_SEC = 50; // ajuste fino da “velocidade” (px por segundo)
+const PX_PER_SEC = 75; // ajuste fino da “velocidade” (px por segundo)
 
   function setMarqueeDurations() {
     document.querySelectorAll('.marquee__row .marquee__track').forEach(track => {

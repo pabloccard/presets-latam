@@ -315,7 +315,7 @@ body {
   }
 
   .hero__btn {
-    font-size: 1rem;
+    font-size: 1.25rem;
     width: 100%;
   }
 
@@ -373,6 +373,10 @@ body {
 
   .hero__headline{ font-size:1.9rem; line-height:1.2; }
   .hero__text{ font-size:1rem; line-height:1.5; }
+}
+
+.verdinho {
+  color: #33c085;
 }
 
 /* Tablets */
