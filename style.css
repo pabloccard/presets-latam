@@ -200,7 +200,7 @@ body {
 /* CTA */
 .hero__btn {
   display: inline-block;
-  background: linear-gradient(45deg, #3ab46d, #45fcc8, #86fd1d);
+  background: linear-gradient(45deg, #3ab46d, #2bcc9e, #86fd1d);
   color: #fff;
   font-size: 1.25rem;
   font-weight: 800;
