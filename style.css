@@ -200,7 +200,7 @@ body {
 /* CTA */
 .hero__btn {
   display: inline-block;
-  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+  background: linear-gradient(45deg, #3ab46d, #45fcc8, #86fd1d);
   color: #fff;
   font-size: 1.25rem;
   font-weight: 800;
@@ -682,7 +682,7 @@ body {
 
 @media (max-width: 768px) {
   .card__title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
   }
 }
@@ -1037,15 +1037,15 @@ body {
 @keyframes pulse {
   0% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 0, 110, 0.6); /* cor inicial (rosa do gradiente) */
+    box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.6); /* cor inicial (rosa do gradiente) */
   }
   70% {
     transform: scale(1.05);
-    box-shadow: 0 0 0 15px rgba(255, 0, 110, 0);
+    box-shadow: 0 0 0 15px rgba(0, 255, 34, 0);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 0, 110, 0);
+    box-shadow: 0 0 0 0 rgba(9, 255, 0, 0);
   }
 }
 
